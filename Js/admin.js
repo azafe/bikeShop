@@ -21,7 +21,8 @@ agregarButton.addEventListener("click", () => {
 })
 
 function actualizarTabla(){
-    tableBody.innerHTML = "";
+    
+    //tableBody.innerHTML = "";
 
     listaDeProductos.forEach((item, index) => {
         const fila = document.createElement("tr");
@@ -48,6 +49,26 @@ function actualizarTabla(){
 
         tableBody.appendChild(fila);
         
+
+        //Agregamos eventos a los botones editar y eliminar
+        editarButton.addEventListener("click", () => {
+            nombreInput.value = item.nombre;
+            descripcionInput.value = item.descripcion;
+            precioInput.value = item.precio;
+            agregarButton.style.display = "none";
+            updateButton.style.display = "inline-block";
+
+            //Guarda el índice del item
+            indexActual = index;
+        } );
+
+        eliminarButton.addEventListener("click", () => {
+            //Elimina el item de la lista
+
+            listaDeProductos.splice(index,1);
+
+            actualizarTabla;
+        });
     })
 }
 
