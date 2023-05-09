@@ -1,5 +1,6 @@
 const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
+const categoriaInput = document.getElementById("categoria")
 const descripcionInput = document.getElementById("descripcion");
 const precioInput = document.getElementById("precio");
 const imagenInput = document.getElementById("imagen");
@@ -8,16 +9,19 @@ const tableBody = document.getElementById("table-body")
 
 let listaDeProductos = [];
 
+
+
 agregarButton.addEventListener("click", () => {
     //Obtenemos los valores del formulario
     const id = idInput.value;
     const nombre = nombreInput.value;
+    const categoria = categoriaInput.value;
     const descripcion = descripcionInput.value;
     const precio = precioInput.value;
     const imagen = imagenInput.value;
 
     //Agregamos los datos a la lista
-    listaDeProductos.push({id, nombre, descripcion, precio, imagen});
+    listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
 
     actualizarTabla();
 })
@@ -29,6 +33,7 @@ function actualizarTabla(){
         const fila = document.createElement("tr");
         const idCelda = document.createElement("td");
         const nombreCelda = document.createElement("td");
+        const categoriaCelda = document.createElement("td");
         const descripcionCelda = document.createElement("td");
         const precioCelda = document.createElement("td");
         const imagenCelda = document.createElement("td");
@@ -37,6 +42,7 @@ function actualizarTabla(){
 
         idCelda.textContent = item.id;
         nombreCelda.textContent = item.nombre;
+        categoriaCelda.textContent = item.categoria;
         descripcionCelda.textContent = item.descripcion;
         precioCelda.textContent = item.precio;
         imagenCelda.textContent = item.imagen;
@@ -45,6 +51,7 @@ function actualizarTabla(){
 
         fila.appendChild(idCelda);
         fila.appendChild(nombreCelda);
+        fila.appendChild(categoriaCelda);
         fila.appendChild(descripcionCelda);
         fila.appendChild(precioCelda);
         fila.appendChild(imagenCelda);
