@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+    <div class="login-box">
+      <img
+        class="logo"
+        src="./img/WhatsApp Image 2023-05-04 at 21.56.35.jpeg"
+        alt="logo bikeshop"
+      />
+      <h1>Loin Here</h1>
+      <form>
+        <label for="Nombre">Nombre o Usuario</label>
+        <input
+          type="text"
+          placeholder="Nombre o Usuario"
+          maxlength="40"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          required
+          id="name"
+          name="name"
+          class="form-control"
+        />
+        <label for="Contraseña">Contraseña</label>
+        <input
+          type="Password"
+          placeholder="Contraseña"
+          minlength="8"
+          maxlength="12"
+          pattern="[a-zA-Z0-9]{8,12}"
+          required
+          id="password"
+          name="password"
+          class="form-control"
+        />
+        <input type="submit" value="Log in" />
+        <a href="#">Olvido su Contraseña?</a><br>
+        <a href="#">Registrarse</a>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
