@@ -52,6 +52,10 @@ function actualizarTabla(){
         fila.appendChild(eliminarButton);
 
         tableBody.appendChild(fila);
+
+
+        
+      
         
     })
 }
