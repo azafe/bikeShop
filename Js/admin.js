@@ -8,8 +8,10 @@ const agregarButton = document.getElementById("agregar");
 const tableBody = document.getElementById("table-body")
 const agregarProductosForm = document.getElementById("agregarProductosForm");
 const listaProductos = document.getElementById("lista-productos");
+
 let listaDeProductos = [];
 
+console.log("HOLA")
 
 //Función para agregar productos
 
@@ -26,19 +28,19 @@ agregarButton.addEventListener("click", () => {
     //Agregamos los datos a la lista
     listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
 
+    agregarProductosForm.reset();
+
     actualizarTabla();
 })
 
 
 
 //Función para eliminar productos
-
-
-
-
+ 
  listaProductos.addEventListener("click", (e) => {
     console.log("Ingresamos a la función");
      if(e.target.classList.contains("eliminar")) {
+        if(confirm("Estas seguro que deseas eliminar el producto?")){
         console.log("El elemento contiene la class eliminar");
         const idCapturado = e.target.dataset.id;
         console.log(idCapturado);
@@ -48,6 +50,10 @@ agregarButton.addEventListener("click", () => {
             actualizarTabla();
         }
      }
+     else{
+        console.log("No se eliminó");
+     }
+    }
 
  })
 
@@ -81,6 +87,7 @@ function actualizarTabla(){
         //Agregamos una clase a los botones
         editarButton.setAttribute("class", "btn btn-primary editar");
         eliminarButton.setAttribute("class", "btn btn-primary eliminar");
+        eliminarButton.setAttribute("data-id", item.id);
 
         idCelda.textContent = item.id;
         nombreCelda.textContent = item.nombre;
@@ -102,10 +109,9 @@ function actualizarTabla(){
 
         tableBody.appendChild(fila);        
       
-        
+
     })
 
-   
 }
 
  //Función para generar un id unico
