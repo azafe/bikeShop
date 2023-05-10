@@ -9,42 +9,29 @@
   </head>
   <body>
     <div class="container">
-    <div class="login-box">
-      <img
-        class="logo"
-        src="./img/WhatsApp Image 2023-05-04 at 21.56.35.jpeg"
-        alt="logo bikeshop"
-      />
-      <h1>Loin Here</h1>
-      <form>
-        <label for="Nombre">Nombre o Usuario</label>
-        <input
-          type="text"
-          placeholder="Nombre o Usuario"
-          maxlength="40"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          required
-          id="name"
-          name="name"
-          class="form-control"
-        />
-        <label for="Contraseña">Contraseña</label>
-        <input
-          type="Password"
-          placeholder="Contraseña"
-          minlength="8"
-          maxlength="12"
-          pattern="[a-zA-Z0-9]{8,12}"
-          required
-          id="password"
-          name="password"
-          class="form-control"
-        />
-        <input type="submit" value="Log in" />
-        <a href="#">Olvido su Contraseña?</a><br>
-        <a href="#">Registrarse</a>
-      </form>
-    </div>
+      <div class="login-box">
+        <img class="logo" src="./img/7.png" alt="logo bikeshop" />
+        <h1>Login Here</h1>
+        <form>
+          <label for="Nombre">Nombre o Usuario</label>
+          <input name="username" type="text" placeholder="Nombre o Usuario" pattern="\w{3,16}" required>
+          <label for="Contraseña">Contraseña</label>
+          <input
+            type="Password"
+            placeholder="Contraseña"
+            minlength="8"
+            maxlength="12"
+            pattern="[a-zA-Z0-9]{8,12}"
+            required
+            id="password"
+            name="password"
+            class="form-control"
+          />
+          <input type="submit" value="Log in" />
+          <a href="#">Olvido su Contraseña?</a><br />
+          <a href="#">Registrarse</a>
+        </form>
+      </div>
     </div>
   </body>
 </html>
