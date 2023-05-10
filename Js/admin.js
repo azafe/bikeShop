@@ -6,25 +6,63 @@ const precioInput = document.getElementById("precio");
 const imagenInput = document.getElementById("imagen");
 const agregarButton = document.getElementById("agregar");
 const tableBody = document.getElementById("table-body")
-
+const agregarProductosForm = document.getElementById("agregarProductosForm");
+const listaProductos = document.getElementById("lista-productos");
 let listaDeProductos = [];
 
 
+//Función para agregar productos
 
 agregarButton.addEventListener("click", () => {
     //Obtenemos los valores del formulario
-    const id = idInput.value;
+    const id = uuidv4();
     const nombre = nombreInput.value;
     const categoria = categoriaInput.value;
     const descripcion = descripcionInput.value;
     const precio = precioInput.value;
     const imagen = imagenInput.value;
 
+
     //Agregamos los datos a la lista
     listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
 
     actualizarTabla();
 })
+
+
+
+//Función para eliminar productos
+
+
+
+
+ listaProductos.addEventListener("click", (e) => {
+    console.log("Ingresamos a la función");
+     if(e.target.classList.contains("eliminar")) {
+        console.log("El elemento contiene la class eliminar");
+        const idCapturado = e.target.dataset.id;
+        console.log(idCapturado);
+        const index = listaDeProductos.findIndex((producto) => producto.id === idCapturado);
+        if (index !== -1){
+            listaDeProductos.splice(index, 1);
+            actualizarTabla();
+        }
+     }
+
+ })
+
+// listaProductos.addEventListener("click", (e) => {
+//     if (e.target.classList.contains("delete")) {
+//       const id = e.target.dataset.id;
+//       const index = productos.findIndex((producto) => producto.id === id); 
+//       if (index !== -1) {
+//         productos.splice(index, 1);
+//         mostrarProductos();
+//       }
+//     }
+//   });
+
+//Función para mostrar datos en la tabla
 
 function actualizarTabla(){
     tableBody.innerHTML = "";
@@ -39,6 +77,10 @@ function actualizarTabla(){
         const imagenCelda = document.createElement("td");
         const editarButton = document.createElement("button");
         const eliminarButton = document.createElement("button");
+
+        //Agregamos una clase a los botones
+        editarButton.setAttribute("class", "btn btn-primary editar");
+        eliminarButton.setAttribute("class", "btn btn-primary eliminar");
 
         idCelda.textContent = item.id;
         nombreCelda.textContent = item.nombre;
@@ -58,12 +100,15 @@ function actualizarTabla(){
         fila.appendChild(editarButton);
         fila.appendChild(eliminarButton);
 
-        tableBody.appendChild(fila);
-
-
-        
+        tableBody.appendChild(fila);        
       
         
     })
+
+   
 }
 
+ //Función para generar un id unico
+ function uuidv4() {
+    return crypto.randomUUID();
+}
