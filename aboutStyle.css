@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100&@700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    color: white;
+
+   
+}
+
+body {   
+    background: rgb(255, 126, 33);
+    background: linear-gradient(90deg, rgba(255, 126, 33, 1) 0%, rgba(27, 27, 27, 1) 100%, rgba(240, 240, 240, 1) 100%);
+    color: white;
+    
+
+}
+#logo {
+    width: 80%;
+    height: 80%;
+
+}
+
+.cardsAbout{
+    
+    padding: 1.3em;
+    max-width: 80em;
+    margin:auto;
+    background: linear-gradient(90deg, rgb(128, 59, 17) 0%, rgba(34,34,34,1) 100%, rgba(0,0,0,0.989233193277311) 100%);
+    border-style: solid;
+    border-radius: 1rem ;
+    border-width: thin;
+    border-color: white;
+   
+}
+ 
