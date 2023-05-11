@@ -22,18 +22,8 @@ footer {
 .logoFooter {
   
   margin-top: 3rem;
-  margin-left: 3rem;
+  /* margin-left: 3rem; */
   width: 40%;
   height: 50%;
   border-radius: 10%;
-}
-
-.redes {
-  height: 5%;
-  width: 5%;
-}
-
-.icons {
-  margin-left: 1rem;
- 
 }
