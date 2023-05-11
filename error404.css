@@ -49,7 +49,6 @@ body{
 .banner_img img{
     width: 400px;
     display: flex;
-    border-radius: 100%;
 }
 header{
     display: flex;
