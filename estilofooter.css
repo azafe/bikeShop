@@ -27,3 +27,12 @@ footer {
   height: 50%;
   border-radius: 10%;
 }
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconfooter{
+  margin: 8px;
+}
