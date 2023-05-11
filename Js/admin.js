@@ -23,15 +23,43 @@ agregarButton.addEventListener("click", () => {
     const descripcion = descripcionInput.value;
     const precio = precioInput.value;
     const imagen = imagenInput.value;
+    const mode = agregarProductosForm.dataset.mode;
+    const editId = agregarProductosForm.dataset.editId;
 
 
     //Agregamos los datos a la lista
-    listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
+    listaDeProductos.push({nombre,categoria, descripcion, precio, imagen});
 
     agregarProductosForm.reset();
 
     actualizarTabla();
 })
+
+
+//Función para editar productos
+
+    listaDeProductos.addEventListener("click", (e) => {
+        if(e.target.classList.contains("editar")) {
+            const idCapturado = e.target.dataset.id;
+            const producto = producto.find((producto) => (producto.id === idCapturado))
+            if (producto) {
+                document.getElementById("nombre").value = producto.nombre;
+                document.getElementById("categoria").value = producto.categoria;
+                document.getElementById("descripcion").value = producto.descripcion;
+                document.getElementById("precio").value = producto.precio;
+                document.getElementById("imagen").value = producto.imagen;
+
+                //Setear el form para que este en modo editar
+                agregarProductosForm.dataset.mode = "editar";
+                //Almacenar el id del producto que se esta editando
+                agregarProductosForm.dataset.editId = id;
+                //Cambiar el texto del botón
+                agregarButton.textContent("Editar");
+                
+            }
+        }
+
+    })
 
 
 
@@ -57,16 +85,8 @@ agregarButton.addEventListener("click", () => {
 
  })
 
-// listaProductos.addEventListener("click", (e) => {
-//     if (e.target.classList.contains("delete")) {
-//       const id = e.target.dataset.id;
-//       const index = productos.findIndex((producto) => producto.id === id); 
-//       if (index !== -1) {
-//         productos.splice(index, 1);
-//         mostrarProductos();
-//       }
-//     }
-//   });
+
+
 
 //Función para mostrar datos en la tabla
 
@@ -86,6 +106,7 @@ function actualizarTabla(){
 
         //Agregamos una clase a los botones
         editarButton.setAttribute("class", "btn btn-primary editar");
+        editarButton.setAttribute("data-id", item.id);
         eliminarButton.setAttribute("class", "btn btn-primary eliminar");
         eliminarButton.setAttribute("data-id", item.id);
 
