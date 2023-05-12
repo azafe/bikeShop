@@ -28,7 +28,7 @@ agregarButton.addEventListener("click", () => {
 
 
     //Agregamos los datos a la lista
-    listaDeProductos.push({nombre,categoria, descripcion, precio, imagen});
+    listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
 
     agregarProductosForm.reset();
 
