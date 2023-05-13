@@ -15,9 +15,10 @@ console.log("HOLA")
 
 //Función para agregar productos
 
-agregarButton.addEventListener("click", () => {
+agregarButton.addEventListener("click", (e) => {
+    e.preventDefault();
+
     //Obtenemos los valores del formulario
-    const id = uuidv4();
     const nombre = nombreInput.value;
     const categoria = categoriaInput.value;
     const descripcion = descripcionInput.value;
@@ -26,11 +27,30 @@ agregarButton.addEventListener("click", () => {
     const mode = agregarProductosForm.dataset.mode;
     const editId = agregarProductosForm.dataset.editId;
 
+    if(mode === "add"){
+        const id = uuidv4();
+        const producto = {id, nombre, categoria, descripcion, precio, imagen};
+        listaDeProductos.push(producto);
+    } else if (mode ==="edit"){
+        const index = listaDeProductos.findIndex((producto) => producto.id === editId);
+        if(index !== -1) {
+            const producto = listaDeProductos[index];
+            producto.nombre = nombre;
+            producto.categoria = categoria;
+            producto.descripcion = descripcion;
+            producto.precio = precio;
+            producto.imagen = imagen;
+        }
+    }
+
+
 
     //Agregamos los datos a la lista
-    listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
+   // listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
 
     agregarProductosForm.reset();
+    agregarProductosForm.dataset.mode = "add";
+    agregarButton.textContent = "Agregar"
 
     actualizarTabla();
 })
@@ -38,23 +58,33 @@ agregarButton.addEventListener("click", () => {
 
 //Función para editar productos
 
-    listaDeProductos.addEventListener("click", (e) => {
+    listaProductos.addEventListener("click", (e) => {
         if(e.target.classList.contains("editar")) {
             const idCapturado = e.target.dataset.id;
-            const producto = producto.find((producto) => (producto.id === idCapturado))
+            const producto = listaDeProductos.find((producto) => (producto.id === idCapturado))
+            console.log("Ingresamos a la función editar");
             if (producto) {
-                document.getElementById("nombre").value = producto.nombre;
-                document.getElementById("categoria").value = producto.categoria;
-                document.getElementById("descripcion").value = producto.descripcion;
-                document.getElementById("precio").value = producto.precio;
-                document.getElementById("imagen").value = producto.imagen;
+
+                nombreInput.value = producto.nombre;
+                categoriaInput.value = producto.categoria;
+                descripcionInput.value = producto.descripcion;
+                precioInput.value = producto.precio;
+                imagenInput.value = producto.imagen;
+
+                // document.getElementById("nombre").value = producto.nombre;
+                // document.getElementById("categoria").value = producto.categoria;
+                // document.getElementById("descripcion").value = producto.descripcion;
+                // document.getElementById("precio").value = producto.precio;
+                // document.getElementById("imagen").value = producto.imagen;
 
                 //Setear el form para que este en modo editar
                 agregarProductosForm.dataset.mode = "editar";
                 //Almacenar el id del producto que se esta editando
-                agregarProductosForm.dataset.editId = id;
+                agregarProductosForm.dataset.editId = idCapturado;
                 //Cambiar el texto del botón
-                agregarButton.textContent("Editar");
+                agregarButton.textContent = "Editar";
+
+                actualizarTabla();
                 
             }
         }
@@ -94,32 +124,41 @@ function actualizarTabla(){
     tableBody.innerHTML = "";
 
     listaDeProductos.forEach((item, index) => {
-        const fila = document.createElement("tr");
-        const idCelda = document.createElement("td");
-        const nombreCelda = document.createElement("td");
-        const categoriaCelda = document.createElement("td");
-        const descripcionCelda = document.createElement("td");
-        const precioCelda = document.createElement("td");
-        const imagenCelda = document.createElement("td");
-        const editarButton = document.createElement("button");
-        const eliminarButton = document.createElement("button");
 
-        //Agregamos una clase a los botones
+        //Creamos los elementos de la tabla
+        const fila = document.createElement("tr");
+
+        const nombreCelda = document.createElement("td");
+        nombreCelda.textContent = item.nombre;
+
+        const categoriaCelda = document.createElement("td");
+        categoriaCelda.textContent = item.categoria;
+
+        const descripcionCelda = document.createElement("td");
+        descripcionCelda.textContent = item.descripcion;
+
+        const precioCelda = document.createElement("td");
+        precioCelda.textContent = item.precio;
+
+        const imagenCelda = document.createElement("td");
+        const imagenProducto = document.createElement("img");
+        imagenProducto.src = item.imagen;
+        imagenProducto.alt = "Imagen del producto"
+        imagenProducto.classList.add("producto-imagen");
+        imagenCelda.appendChild(imagenProducto);
+
+        const editarButton = document.createElement("button");
         editarButton.setAttribute("class", "btn btn-primary editar");
         editarButton.setAttribute("data-id", item.id);
+        editarButton.textContent = "Editar";
+
+        const eliminarButton = document.createElement("button");
         eliminarButton.setAttribute("class", "btn btn-primary eliminar");
         eliminarButton.setAttribute("data-id", item.id);
-
-        idCelda.textContent = item.id;
-        nombreCelda.textContent = item.nombre;
-        categoriaCelda.textContent = item.categoria;
-        descripcionCelda.textContent = item.descripcion;
-        precioCelda.textContent = item.precio;
-        imagenCelda.textContent = item.imagen;
-        editarButton.textContent = "Editar";
         eliminarButton.textContent = "Eliminar";
+       
+       
 
-        fila.appendChild(idCelda);
         fila.appendChild(nombreCelda);
         fila.appendChild(categoriaCelda);
         fila.appendChild(descripcionCelda);
@@ -132,10 +171,12 @@ function actualizarTabla(){
       
 
     })
-
 }
+
+
+
 
  //Función para generar un id unico
  function uuidv4() {
     return crypto.randomUUID();
-}
+ }

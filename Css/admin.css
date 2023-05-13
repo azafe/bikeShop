@@ -16,3 +16,8 @@
     border-color: red;
     
     }
+    
+.producto-imagen {
+      max-width: 100px; /* Ajusta el ancho máximo según tus necesidades */
+      height: auto; /* Mantener la proporción de aspecto */
+    }
