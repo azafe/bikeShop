@@ -141,7 +141,11 @@ function actualizarTabla(){
         precioCelda.textContent = item.precio;
 
         const imagenCelda = document.createElement("td");
-        imagenCelda.textContent = item.imagen;
+        const imagenProducto = document.createElement("img");
+        imagenProducto.src = item.imagen;
+        imagenProducto.alt = "Imagen del producto"
+        imagenProducto.classList.add("producto-imagen");
+        imagenCelda.appendChild(imagenProducto);
 
         const editarButton = document.createElement("button");
         editarButton.setAttribute("class", "btn btn-primary editar");
