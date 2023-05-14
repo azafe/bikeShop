@@ -1,3 +1,4 @@
+
 const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
 const categoriaInput = document.getElementById("categoria")
@@ -11,10 +12,43 @@ const listaProductos = document.getElementById("lista-productos");
 
 let listaDeProductos = [];
 
+
+
+
+agregarButton.addEventListener("click", agregarProducto);
+
+listaProductos.addEventListener("click", editarProducto);
+
+listaProductos.addEventListener("click", eliminarProducto);
+
+//Función para validar el formulario
+
+    function validarForm () {
+
+        if (nombreInput.value == ""){
+            alert("Debe ingresar el nombre del producto");
+            return false;
+        }
+
+        if(categoriaInput.value == ""){
+            alert("Debe ingresar la categoría del producto");
+            return false;
+        }
+
+        if(precioInput.value == ""){
+            alert("Debe ingresar un precio del producto");
+            return false;
+        }
+
+        return true;
+    }
+
 //Función para agregar productos
 
-agregarButton.addEventListener("click", (e) => {
+function agregarProducto(e) {
     e.preventDefault();
+
+    if(validarForm() == true){
 
     //Obtenemos los valores del formulario
     const nombre = nombreInput.value;
@@ -24,6 +58,8 @@ agregarButton.addEventListener("click", (e) => {
     const imagen = imagenInput.value;
     const mode = agregarProductosForm.dataset.mode;
     const editId = agregarProductosForm.dataset.editId;
+
+
 
     if(mode === "add"){
         const id = uuidv4();
@@ -49,45 +85,43 @@ agregarButton.addEventListener("click", (e) => {
     agregarButton.textContent = "Agregar"
 
     actualizarTabla();
-})
-
+}
+}
 
 
 //Función para editar productos
+function editarProducto(e){
+    if(e.target.classList.contains("editar")) {
+        const idCapturado = e.target.dataset.id;
+        const producto = listaDeProductos.find((producto) => (producto.id === idCapturado))
+        if (producto) {
 
-    listaProductos.addEventListener("click", (e) => {
-        if(e.target.classList.contains("editar")) {
-            const idCapturado = e.target.dataset.id;
-            const producto = listaDeProductos.find((producto) => (producto.id === idCapturado))
-            if (producto) {
+            nombreInput.value = producto.nombre;
+            categoriaInput.value = producto.categoria;
+            descripcionInput.value = producto.descripcion;
+            precioInput.value = producto.precio;
+            imagenInput.value = producto.imagen;
 
-                nombreInput.value = producto.nombre;
-                categoriaInput.value = producto.categoria;
-                descripcionInput.value = producto.descripcion;
-                precioInput.value = producto.precio;
-                imagenInput.value = producto.imagen;
+            actualizarTabla();
 
-                actualizarTabla();
+            //Setear el form para que este en modo editar
+            agregarProductosForm.dataset.mode = "edit";
+            
+            //Almacenar el id del producto que se esta editando
+            agregarProductosForm.dataset.editId = idCapturado;
+            //Cambiar el texto del botón
+            agregarButton.textContent = "Editar";
+            agregarButton.setAttribute("class", "btn btn-warning")
 
-                //Setear el form para que este en modo editar
-                agregarProductosForm.dataset.mode = "edit";
-                
-                //Almacenar el id del producto que se esta editando
-                agregarProductosForm.dataset.editId = idCapturado;
-                //Cambiar el texto del botón
-                agregarButton.textContent = "Editar";
-                agregarButton.setAttribute("class", "btn btn-warning")
-
-                
-            }
+            
         }
-
-    })
+    }
+}
 
 
 //Función para eliminar productos
- 
- listaProductos.addEventListener("click", (e) => {
+
+function eliminarProducto(e) {
     console.log("Ingresamos a la función");
      if(e.target.classList.contains("eliminar")) {
         if(confirm("Estas seguro que deseas eliminar el producto?")){
@@ -104,11 +138,13 @@ agregarButton.addEventListener("click", (e) => {
         console.log("No se eliminó");
      }
     }
+}
+ 
 
- })
 
 
 
+ 
 
 //Función para mostrar datos en la tabla
 
