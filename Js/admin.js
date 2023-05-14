@@ -103,13 +103,12 @@ function editarProducto(e){
 
             actualizarTabla();
 
-            //Setear el form para que este en modo editar
             agregarProductosForm.dataset.mode = "edit";
             
-            //Almacenar el id del producto que se esta editando
             agregarProductosForm.dataset.editId = idCapturado;
-            //Cambiar el texto del botón
+
             agregarButton.textContent = "Editar";
+
             agregarButton.setAttribute("class", "btn btn-warning")
 
             
@@ -200,6 +199,15 @@ function actualizarTabla(){
       
 
     })
+
+    localStorage.setItem("productos", JSON.stringify(listaDeProductos));
+}
+
+const prodcutosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+
+if(prodcutosLocalStorage){
+    listaDeProductos = prodcutosLocalStorage;
+    actualizarTabla();
 }
 
 
