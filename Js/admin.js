@@ -11,8 +11,6 @@ const listaProductos = document.getElementById("lista-productos");
 
 let listaDeProductos = [];
 
-console.log("HOLA")
-
 //Función para agregar productos
 
 agregarButton.addEventListener("click", (e) => {
@@ -32,6 +30,7 @@ agregarButton.addEventListener("click", (e) => {
         const producto = {id, nombre, categoria, descripcion, precio, imagen};
         listaDeProductos.push(producto);
     } else if (mode ==="edit"){
+        agregarButton.setAttribute("class", "btn btn-primary")
         const index = listaDeProductos.findIndex((producto) => producto.id === editId);
         if(index !== -1) {
             const producto = listaDeProductos[index];
@@ -45,9 +44,6 @@ agregarButton.addEventListener("click", (e) => {
 
 
 
-    //Agregamos los datos a la lista
-   // listaDeProductos.push({id, nombre,categoria, descripcion, precio, imagen});
-
     agregarProductosForm.reset();
     agregarProductosForm.dataset.mode = "add";
     agregarButton.textContent = "Agregar"
@@ -56,13 +52,13 @@ agregarButton.addEventListener("click", (e) => {
 })
 
 
+
 //Función para editar productos
 
     listaProductos.addEventListener("click", (e) => {
         if(e.target.classList.contains("editar")) {
             const idCapturado = e.target.dataset.id;
             const producto = listaDeProductos.find((producto) => (producto.id === idCapturado))
-            console.log("Ingresamos a la función editar");
             if (producto) {
 
                 nombreInput.value = producto.nombre;
@@ -71,26 +67,22 @@ agregarButton.addEventListener("click", (e) => {
                 precioInput.value = producto.precio;
                 imagenInput.value = producto.imagen;
 
-                // document.getElementById("nombre").value = producto.nombre;
-                // document.getElementById("categoria").value = producto.categoria;
-                // document.getElementById("descripcion").value = producto.descripcion;
-                // document.getElementById("precio").value = producto.precio;
-                // document.getElementById("imagen").value = producto.imagen;
+                actualizarTabla();
 
                 //Setear el form para que este en modo editar
-                agregarProductosForm.dataset.mode = "editar";
+                agregarProductosForm.dataset.mode = "edit";
+                
                 //Almacenar el id del producto que se esta editando
                 agregarProductosForm.dataset.editId = idCapturado;
                 //Cambiar el texto del botón
                 agregarButton.textContent = "Editar";
+                agregarButton.setAttribute("class", "btn btn-warning")
 
-                actualizarTabla();
                 
             }
         }
 
     })
-
 
 
 //Función para eliminar productos
