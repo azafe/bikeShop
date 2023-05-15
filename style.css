@@ -13,25 +13,23 @@ body {
   height: 420px;
   top: 50%;
   left: 50%;
+  padding: 70px 30px;
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 70px 30px;
   background-color: rgba(120, 119, 123, 0.3);
   font-weight: bold;
   border-radius: 0.5em;
   box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
 }
 
-
-
 .login-box .logo {
- width: 80px;
- height: 80px;
- border-radius: 10%;
- position: absolute;
- top: 4%;
- left: calc(50% -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
+  position: absolute;
+  top: 4%;
+  left: calc(50% -50%);
 }
 
 .login-box h1 {
@@ -75,9 +73,14 @@ body {
   background-color: black;
   color: whitesmoke;
 }
-.login-box a {
+.container-modal a {
   text-decoration: none;
-  font-size: 12px;
-  text-align: right;
+  font-size: 14px;
   color: rgb(255, 255, 255);
 }
+
+.colorText {
+  color: rgb(255, 255, 255);
+}
+
+
