@@ -1,3 +1,5 @@
+export  {listaDeProductos}
+
 
 const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
