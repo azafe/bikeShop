@@ -5,7 +5,7 @@
 /* inicio stylo de about*/
 *{
     margin: 0%;
-    padding: 0%;   
+    font-family: Georgia, 'Times New Roman', Times, serif;   
 }
 
 body {   
@@ -113,3 +113,39 @@ nav {
     justify-content: center;
     align-items: center;
   }
+
+  /* final de estylos de navbar*/
+
+
+  /* inicio estylos footer*/
+
+
+  footer {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 1);
+  }
+  
+  .logoFooter {
+    margin-top: 3rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10%;
+  
+  }
+  
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .iconfooter{
+    margin: 8px;
+  }
+
+
+  /* fin estylos footer*/
