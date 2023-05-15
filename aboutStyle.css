@@ -1,28 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100&@700&display=swap');
 
+
+
+/* inicio stylo de about*/
 *{
     margin: 0%;
-    padding: 0%;
-    color: white;
-
-   
+    padding: 0%;   
 }
 
 body {   
     background: rgb(255, 126, 33);
     background: linear-gradient(90deg, rgba(255, 126, 33, 1) 0%, rgba(27, 27, 27, 1) 100%, rgba(240, 240, 240, 1) 100%);
-    color: white;
-    
+ }
 
-}
-#logo {
+ #logo {
     width: 80%;
     height: 80%;
-
 }
 
-.cardsAbout{
-    
+.cardsAbout{    
     padding: 1.3em;
     max-width: 80em;
     margin:auto;
@@ -31,6 +27,89 @@ body {
     border-radius: 1rem ;
     border-width: thin;
     border-color: white;
-   
 }
+
+div{
+ color: white;
+}
+
+/* fin de estylos de about*/
+
+
+/* inicio de estylos de navbar*/
  
+
+nav {
+    background: rgb(181,74,8);
+  background: linear-gradient(90deg, rgba(181,74,8,1) 0%, rgba(34,34,34,1) 100%, rgba(0,0,0,0.989233193277311) 100%);
+    overflow: hidden;
+  }
+  
+  nav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav form {
+  display: flex;
+  align-items: end;
+    margin-top: 8px;
+    margin-right: 16px;
+    justify-content: center;
+  }
+  nav forma {
+    display: flex;
+    margin-top: 8px;
+    margin-right: 16px;
+  }
+  
+  
+  nav input[type="text"] {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  nav button[type="submit"] {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ddd;
+    margin-left: -5px;
+  }
+  
+  nav button[type="submit"]:hover {
+    background-color: #bbb;
+    cursor: pointer;
+  }
+  
+  .highlight {
+    background-color: yellow;
+  }
+  
+  .logonav{
+    height: 70px;
+  border-radius: 10px 10px 10px ;
+  }
+  
+  .loginnav{
+    border-radius: 80%;
+    height: 40px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   }
+   .susnav{
+    border-radius: 80%;
+    height: 40px;
+    color: black;
+    
+  }
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
