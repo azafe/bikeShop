@@ -68,3 +68,24 @@
 }
 
 
+/* estilos principal*/
+
+.categoriFil a{
+    text-decoration: none;
+    color: black;
+   
+}
+
+.cuadroPrec{
+    display: flex;
+}
+.min{
+    display: flex;
+    width: 90%;
+}
+
+.cuadroPre{
+    display: flex;
+}
+
+
