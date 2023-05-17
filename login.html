@@ -54,26 +54,26 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
     <div
       class="modal fade"
       id="registro"
       tabindex="-1"
-      aria-labelledby="registro"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
-        <div class="modal-body vh-100">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
           <div
             class="container d-flex align-items-center justify-content-center vh-100"
           >
             <div class="row">
               <div class="col-sm-12 col-md-12 col-lg-12">
                 <form action="" method="POST">
-                  <h1 class="display-7 text-center colorText">
-                    REGISTRO PERSONAL
-                  </h1>
+                  <h1 class="display-7 text-center">REGISTRO PERSONAL</h1>
                   <div class="form-group colorText">
-                    <label for="">Nombre</label>
+                    <label for="nombre">Nombre</label>
                     <input
                       type="text"
                       placeholder="Ingrese su nombre"
@@ -86,7 +86,7 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="">Apellido</label>
+                    <label for="apellido">Apellido</label>
                     <input
                       type="text"
                       placeholder="Ingrese su apellido"
@@ -99,7 +99,7 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="">Email</label>
+                    <label for="mail">Email</label>
                     <input
                       type="email"
                       placeholder="ej: tunombre@email.com"
@@ -112,7 +112,7 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="asd">Telefono</label>
+                    <label for="telefono">Telefono</label>
                     <input
                       type="text"
                       placeholder="ej: 1123658569"
@@ -125,7 +125,7 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="asd">Codigo Postal</label>
+                    <label for="cp">Codigo Postal</label>
                     <input
                       type="number"
                       placeholder="ej: 4000"
@@ -138,7 +138,7 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="">Nombre de Usuario</label>
+                    <label for="usuario">Nombre de Usuario</label>
                     <input
                       type="email"
                       placeholder="ej: tucuenta@email.com"
@@ -151,21 +151,23 @@
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="">Contraseña [Min 8, Max 12]</label>
+                    <label for="contraseña">Contraseña [Min 8, Max 12]</label>
                     <input
                       type="password"
                       placeholder=""
                       minlength="8"
                       maxlength="12"
                       pattern="[a-zA-Z0-9]{8,12}"
-                      id="password"
+                      id="contraseña"
                       required
                       name="password"
                       class="form-control"
                     />
                   </div>
                   <div class="form-group colorText">
-                    <label for="">Confirmar contraseña [Min 8, Max 12]</label>
+                    <label for="confContraseña"
+                      >Confirmar contraseña [Min 8, Max 12]</label
+                    >
                     <input
                       type="password"
                       placeholder=""
@@ -173,29 +175,28 @@
                       maxlength="12"
                       pattern="[a-zA-Z0-9]{8,12}"
                       required
-                      id="password"
+                      id="confContraseña"
                       name="password"
                       class="form-control"
                     />
                   </div>
-                  <br />
-                  <div class="overflow-hidden text-center">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Cerrar
-                    </button>
-                    <button
-                      type="submit"
-                      class="btn btn-primary"
-                      value="Crear cuenta"
-                    >
-                      Registrar
-                    </button>
-                  </div>
                 </form>
+                <div class="overflow-hidden text-center mt-2">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Cerrar
+                  </button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    value="Crear cuenta"
+                  >
+                    Registrar
+                  </button>
+                </div>
               </div>
             </div>
           </div>
