@@ -1,9 +1,9 @@
 
-import {PI} from "./admin.js"
+import {listaDeProductos} from "./admin.js"
 
 
 console.log("Entramos a grid");
-console.log(PI);
+console.log(listaDeProductos);
 
 
 

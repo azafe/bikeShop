@@ -1,7 +1,5 @@
-export const PI = 314;
 
-
-const idInput = document.getElementById("id");
+//const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
 const categoriaInput = document.getElementById("categoria")
 const descripcionInput = document.getElementById("descripcion");
@@ -12,13 +10,19 @@ const tableBody = document.getElementById("table-body")
 const agregarProductosForm = document.getElementById("agregarProductosForm");
 const listaProductos = document.getElementById("lista-productos");
 
-let listaDeProductos = [];
+export let listaDeProductos = [];
 
+if(agregarButton){
 agregarButton.addEventListener("click", agregarProducto);
+}
 
+if(listaProductos){
 listaProductos.addEventListener("click", editarProducto);
+}
 
+if(listaProductos){
 listaProductos.addEventListener("click", eliminarProducto);
+}
 
 console.log("Entramos a admin")
 console.log(listaDeProductos);
@@ -46,7 +50,7 @@ console.log(listaDeProductos);
         return true;
     }
 
-//Función para agregar productos
+// //Función para agregar productos
 
 function agregarProducto(e) {
     e.preventDefault();
@@ -91,7 +95,7 @@ function agregarProducto(e) {
 }
 }
 
-//Función para editar productos
+// //Función para editar productos
 function editarProducto(e){
     if(e.target.classList.contains("editar")) {
         const idCapturado = e.target.dataset.id;
@@ -120,7 +124,7 @@ function editarProducto(e){
 }
 
 
-//Función para eliminar productos
+// //Función para eliminar productos
 
 function eliminarProducto(e) {
      if(e.target.classList.contains("eliminar")) {
@@ -149,10 +153,12 @@ function eliminarProducto(e) {
 }
   
 
-//Función para mostrar datos en la tabla
+// //Función para mostrar datos en la tabla
 
 function actualizarTabla(){
+    if(tableBody){
     tableBody.innerHTML = "";
+    }
 
     listaDeProductos.forEach((item, index) => {
 
@@ -198,8 +204,9 @@ function actualizarTabla(){
         fila.appendChild(editarButton);
         fila.appendChild(eliminarButton);
 
+        if(tableBody){
         tableBody.appendChild(fila);        
-      
+        }
 
     })
 
