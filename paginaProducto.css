@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.body {
+    border-color: black;
+}
+
+
+/* inicio cards*/
+.card-body .btn-success {
+    border-radius: 5px;
+    background-color: #263e3e;
+    border-color: none;
+
+}
+
+.card-body .btn-success:hover {
+    background-color: #ff8b66;
+    color: #263e3e;
+    font-weight: 600;
+    border: none;
+    font-size: 15px;
+}
+
+.card .card-title {
+    font-weight: 550;
+    font-size: 17px;
+    color: rgba(255, 126, 33, 1);
+    letter-spacing: 1px;
+}
+
+.cards-hovC:hover {
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+
+.precioOrig {
+    padding-left: 25%;
+    margin-bottom: 10%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #263e3e;
+}
+
+.tituloCat {
+    justify-content: center;
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+
+}
+ 
+/* fin cards*/
+
+/* inicio estylos principal*/
+
+
+.colorFondo{
+    background-color:  #ededed;
+}
+
+.categoriFil a {
+    text-decoration: none;
+    color: black;
+    
+
+}
+
+.cuadroPrec {
+    display: flex;
+}
+
+.min {
+    display: flex;
+    width: 90%;
+}
+
+.cuadroPre {
+    display: flex;
+       
+}
+.min{
+    font-weight: 600;
+    border: none;
+    font-size: 15px;
+}
+
+/* final estylos principal*/
+
+
+
+/* inicio estylo navbar*/
+
+
+nav {
+   background-color: black;
+    overflow: hidden;
+  }
+  .hambur{
+    background-color: white;
+  }
+  nav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav form {
+  display: flex;
+  align-items: end;
+    margin-top: 8px;
+    margin-right: 16px;
+    justify-content: center;
+  }
+  nav form {
+    display: flex;
+    margin-top: 8px;
+    margin-right: 16px;
+  }
+  
+  
+  nav input[type="text"] {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  nav button[type="submit"] {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ddd;
+    margin-left: -5px;
+  }
+  
+  nav button[type="submit"]:hover {
+    background-color: #bbb;
+    cursor: pointer;
+  }
+  
+  .highlight {
+    background-color: yellow;
+  }
+  
+  .logonav{
+    height: 70px;
+  border-radius: 10px 10px 10px ;
+  }
+  
+  .loginnav{
+    border-radius: 80%;
+    height: 40px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+   }
+   .susnav{
+    border-radius: 80%;
+    height: 40px;
+    color: black;
+    
+  }
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/* fin estylo navbar*/
+
+
+
+
+  /* inicio estylos footer*/
+  footer {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27, 27, 27, 1);
+}
+
+.logoFooter {
+  margin-top: 3rem;
+  width: 40%;
+  height: 50%;
+  border-radius: 10%;
+
+}
+
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iconfooter{
+  margin: 8px;
+}
+
+.ondaFo{
+    background-color: #ededed;
+}
+ /* fin estylos footer*/
+
+/* stylo filtro */
+ .filtro {
+  margin-top: -40rem;
+ }
+
+ /* fin stylo filtro */
