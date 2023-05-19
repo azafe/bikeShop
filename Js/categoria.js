@@ -2,48 +2,51 @@
 import {listaDeProductos} from "./admin.js"
 
 
-console.log("Entramos a grid");
-console.log(listaDeProductos);
 
 
+const gridContainer = document.getElementById("grid-container")
 
-//console.log(PI);
-// listaDeProductos.forEach((producto) => {
-//     const colDiv = document.createElement("div");
-//     colDiv.className = "col-lg-4 col-md-6";
+listaDeProductos.forEach((producto) => {
+    const colDiv = document.createElement("div");
+    colDiv.className = "col-lg-4 col-md-6 mb-3";
 
-//     const cardDiv = document.createElement("div");
-//     cardDiv.className = "card";
+    const cardDiv = document.createElement("div");
+    cardDiv.className = "card shadow-lg";
 
-//     const imagen = document.createElement("img")
-//     imagen.src = producto.imagen;
-//     imagen.className = "card-img-top"
+    const imagen = document.createElement("img")
+    imagen.src = producto.imagen;
+    imagen.className = "card-img-top"
 
-//     const cardBody = document.createElement("div");
-//     cardBody.className = "card-body"
+    const cardHover = document.createElement("div")
+    cardHover.className = "cards-hovC"
 
-//     const nombre = document.createElement("h5");
-//     nombre.className = "card-title";
-//     nombre.textContent = producto.nombre;
+    const cardBody = document.createElement("div");
+    cardBody.className = "card-body "
 
-//     const precio = document.createElement("p");
-//     precio.className = "card-text";
-//     precio.textContent = producto.precio;
+    const nombre = document.createElement("h5");
+    nombre.className = "card-title";
+    nombre.textContent = producto.nombre;
 
-//     const button = document.createElement("a");
-//     button.href = "#";
-//     button.className = "btn btn-primary";
-//     button.textContent = "Agregar al carrito"
+    const precio = document.createElement("p");
+    precio.className = "card-text d-flex";
+    precio.textContent = producto.precio;
 
-//     cardBody.appendChild(nombre);
-//     cardBody.appendChild(precio);
-//     cardBody.appendChild(button);
+    const button = document.createElement("a");
+    button.href = "#";
+    button.className = "btn btn-success";
+    button.textContent = "Agregar al carrito"
 
-//     cardDiv.appendChild(imagen);
-//     cardDiv.appendChild(cardBody);
+    cardBody.appendChild(nombre);
+    cardBody.appendChild(precio);
+    cardBody.appendChild(button);
 
-//     colDiv.appendChild(cardDiv);
+    cardDiv.appendChild(imagen);
+    cardDiv.appendChild(cardBody);
 
-//     gridContainer.appendChild(colDiv);
+    colDiv.appendChild(cardHover);
 
-// })
+    cardHover.appendChild(cardDiv);
+
+    gridContainer.appendChild(colDiv);
+
+})
