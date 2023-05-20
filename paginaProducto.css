@@ -1,94 +1,95 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
 .body {
-    border-color: black;
+  border-color: black;
 }
 
 
 /* inicio cards*/
 .card-body .btn-success {
-    border-radius: 5px;
-    background-color: #263e3e;
-    border-color: none;
+  border-radius: 5px;
+  background-color: #263e3e;
+  border-color: none;
 
 }
 
 .card-body .btn-success:hover {
-    background-color: #ff8b66;
-    color: #263e3e;
-    font-weight: 600;
-    border: none;
-    font-size: 15px;
+  background-color: #ff8b66;
+  color: #263e3e;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
 }
 
 .card .card-title {
-    font-weight: 550;
-    font-size: 17px;
-    color: rgba(255, 126, 33, 1);
-    letter-spacing: 1px;
+  font-weight: 550;
+  font-size: 17px;
+  color: rgba(255, 126, 33, 1);
+  letter-spacing: 1px;
 }
 
 .cards-hovC:hover {
-    transition: 1.5s;
-    transform: scale(1.05);
+  transition: 1.5s;
+  transform: scale(1.05);
 }
 
 
 .precioOrig {
-    padding-left: 25%;
-    margin-bottom: 10%;
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #263e3e;
+  padding-left: 25%;
+  margin-bottom: 10%;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #263e3e;
 }
 
 .tituloCat {
-    justify-content: center;
-    display: flex;
-    margin-bottom: 5%;
-    margin-top: 5%;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 5%;
+  margin-top: 5%;
 
 
 }
- 
+
 /* fin cards*/
 
 /* inicio estylos principal*/
 
 
-.colorFondo{
-    background-color:  #ededed;
+.colorFondo {
+  background-color: #ededed;
 }
 
 .categoriFil a {
-    text-decoration: none;
-    color: black;
-    
+  text-decoration: none;
+  color: black;
+
 
 }
 
 .cuadroPrec {
-    display: flex;
+  display: flex;
 }
 
 .min {
-    display: flex;
-    width: 90%;
+  display: flex;
+  width: 90%;
 }
 
 .cuadroPre {
-    display: flex;
-       
+  display: flex;
+  margin-top: 5%
 }
-.min{
-    font-weight: 600;
-    border: none;
-    font-size: 15px;
+
+.min {
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
 }
 
 /* final estylos principal*/
@@ -99,88 +100,93 @@
 
 
 nav {
-   background-color: black;
-    overflow: hidden;
-  }
-  .hambur{
-    background-color: white;
-  }
-  nav a {
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  nav form {
+  background-color: black;
+  overflow: hidden;
+}
+
+.hambur {
+  background-color: white;
+}
+
+nav a {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav form {
   display: flex;
   align-items: end;
-    margin-top: 8px;
-    margin-right: 16px;
-    justify-content: center;
-  }
-  nav form {
-    display: flex;
-    margin-top: 8px;
-    margin-right: 16px;
-  }
-  
-  
-  nav input[type="text"] {
-    padding: 6px;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  nav button[type="submit"] {
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: #ddd;
-    margin-left: -5px;
-  }
-  
-  nav button[type="submit"]:hover {
-    background-color: #bbb;
-    cursor: pointer;
-  }
-  
-  .highlight {
-    background-color: yellow;
-  }
-  
-  .logonav{
-    height: 70px;
-  border-radius: 10px 10px 10px ;
-  }
-  
-  .loginnav{
-    border-radius: 80%;
-    height: 40px;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-   }
-   .susnav{
-    border-radius: 80%;
-    height: 40px;
-    color: black;
-    
-  }
-  .login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin-top: 8px;
+  margin-right: 16px;
+  justify-content: center;
+}
+
+nav form {
+  display: flex;
+  margin-top: 8px;
+  margin-right: 16px;
+}
+
+
+nav input[type="text"] {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+nav button[type="submit"] {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ddd;
+  margin-left: -5px;
+}
+
+nav button[type="submit"]:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.logonav {
+  height: 70px;
+  border-radius: 10px 10px 10px;
+}
+
+.loginnav {
+  border-radius: 80%;
+  height: 40px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.susnav {
+  border-radius: 80%;
+  height: 40px;
+  color: black;
+
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* fin estylo navbar*/
 
 
 
 
-  /* inicio estylos footer*/
-  footer {
+/* inicio estylos footer*/
+footer {
   font-family: Georgia, "Times New Roman", Times, serif;
   display: flex;
   justify-content: flex-end;
@@ -198,23 +204,62 @@ nav {
 
 }
 
-.row{
+.row {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
-.iconfooter{
+
+.iconfooter {
   margin: 8px;
 }
 
-.ondaFo{
-    background-color: #ededed;
+.ondaFo {
+  background-color: #ededed;
 }
- /* fin estylos footer*/
+
+/* fin estylos footer*/
 
 /* stylo filtro */
- .filtro {
-  margin-top: -40rem;
- }
 
- /* fin stylo filtro */
+.filtro {
+  gap: 10px;
+  padding: 0%;
+}
+
+.tituFil.tituSub {
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.filtro-container {
+  margin-top: 10%;
+
+}
+
+.tituSube {
+  margin-top: 10%;
+}
+
+.botonFil {
+  margin-top: 4%;
+  border-radius: 5px;
+  background-color: #263e3e;
+  border-color: #263e3e;
+  color: white;
+  height: 80%;
+  font-weight: 600;
+  font-size: 15px;
+}
+.selB{
+  margin-top: 4%;
+  border-radius: 5px;
+  background-color: #263e3e;
+  border-color: #263e3e;
+  color: white;
+  height: 80%;
+  font-weight: 600;
+  font-size: 15px;
+  
+
+}
+/* fin stylo filtro */
