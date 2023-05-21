@@ -1,4 +1,4 @@
-//js navbar//
+// js navbar
 const form = document.querySelector("form");
 const input = document.querySelector('input[type="text"]');
 const content = document.querySelector("body");
@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
   }
 });
 
-//js principal//
+// js principal
 const bicicletasContainer = document.getElementById('bicicletas-container');
 const filtroSelect = document.getElementById('opFil');
 
@@ -28,42 +28,42 @@ const bicicletas = [
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Mega Yellow M-Bike 29',
     categoria: 'mountain bike',
-    precio: '$140.999',
+    precio: '140000',
     src: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp'
   },
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Mega BLue M-Bike 29',
     categoria: 'mountain bike',
-    precio: '$210.999',
+    precio: '210000',
     src: 'https://i.postimg.cc/pTyfc1Q4/sunshine-celeste-rojo.webp'
   },
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Mega RUTA  R-29',
     categoria: 'ruta',
-    precio: '$384.999',
+    precio: '384000',
     src: 'https://i.postimg.cc/jj1sb06w/biciBR4.jpg'
   },
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Mega RUTA R-29',
     categoria: 'ruta',
-    precio: '$269.999',
+    precio: '260000',
     src: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp'
   },
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Tega Nena c/rueditas',
     categoria: 'ninos',
-    precio: '$36.700',
+    precio: '36000',
     src: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp'
   },
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Tega Free-Style unisex',
     categoria: 'ninos',
-    precio: '$49.999',
+    precio: '49000',
     src: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
   },
 
@@ -82,7 +82,7 @@ const mostrarBicicletas = (bicicletas) => {
           <div class="card-body ${bicicleta.categoria}">
             <h6 class="card-title"><b>${bicicleta.marca} ${bicicleta.modelo}</b><img src="https://i.postimg.cc/W1wFMSLW/icono-topmega2.png" alt="topmega"></h6>
             <div class="card-text d-flex">
-              <h5 class="precioOrig me-3">${bicicleta.precio}</h5>
+              <h5 class="precioOrig me-3">$${bicicleta.precio}</h5>
             </div>
             <div class="d-flex justify-content-center">
               <a href="../html/carrito.html" class="btn btn-success">AGREGAR AL CARRITO</a>
@@ -110,4 +110,31 @@ const filtrarBicicletas = () => {
 filtroSelect.addEventListener('change', filtrarBicicletas);
 
 mostrarBicicletas(bicicletas);
+
+
+//filtro precio js//
+
+
+ function filtrarPorPrecio() {
+  const minimo = parseFloat(document.getElementById("minimo").value);
+  const maximo = parseFloat(document.getElementById("maximo").value);
+
+  const bicicletasContainer = document.getElementById("bicicletas-container");
+  const bicicletasFiltradasPrecios=[]
+  bicicletas.forEach((bicicleta)=>{
+    precio=bicicleta.precio
+    if(precio >= minimo && precio <= maximo ){
+      bicicletasFiltradasPrecios.push(bicicleta)      
+    } else {}
+  }
+ )
+ mostrarBicicletas(bicicletasFiltradasPrecios);
+  
+ }
+
+
+// Agregar un evento click al botón de búsqueda
+const botonFil = document.querySelector(".botonFil");
+botonFil.addEventListener("click", filtrarPorPrecio);
+
 
