@@ -1,3 +1,4 @@
+export let listaDeProductos = [];
 
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
@@ -10,7 +11,6 @@ const tableBody = document.getElementById("table-body")
 const agregarProductosForm = document.getElementById("agregarProductosForm");
 const listaProductos = document.getElementById("lista-productos");
 
-export let listaDeProductos = [];
 
 if(agregarButton){
 agregarButton.addEventListener("click", agregarProducto);
@@ -24,8 +24,6 @@ if(listaProductos){
 listaProductos.addEventListener("click", eliminarProducto);
 }
 
-console.log("Entramos a admin")
-console.log(listaDeProductos);
 
 
 //Función para validar el formulario

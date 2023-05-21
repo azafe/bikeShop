@@ -3,35 +3,30 @@
 <head>
   <title>The Bike Shop</title>
   <link rel="stylesheet" href="../paginaProducto.css">
+  <link rel="stylesheet" href="../Css/categoria.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-  
 </head>
 <body>
-  
   <!-- Contenido de la página -->
   <div class="container">
     <div><h5>Inicio> Rodados > Mountain Bike</h5></div>
-    <div class="row">
-        <div class="col-md-2">
+    <div class="row" style="display:flex">
+        <div class="col col-md-2 filtro mt-4">
             <h5>Filtros</h5>
             <div>
               <h6>Categoría: </h6>
-              <div>Todas</div>
-              <div>Mountain Bike</div>
-              <div>Ruta</div>
-              <div>Niños</div>
+              <div href="#" class="category-link" data-category="all">Todas</div>
+              <div href="#" class="category-link" data-category="Mountain Bike">Mountain Bike</div>
+              <div class="category-link" data-category="Ruta">Ruta</div>
+              <div class="category-link" data-category="Niños">Niños</div>
             </div>
-            
-            
         </div>
-        <div class="row col-md-10" id="grid-container"></div>  
+        <div class="col-md-10 row" id="grid-container"></div>  
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="../Js/categoria.js" type="module" defer></script>
+  <script src="../Js/categoria.js" type="module"></script>
 </body>
 </html>
- 

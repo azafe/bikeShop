@@ -2,11 +2,17 @@
 import {listaDeProductos} from "./admin.js"
 
 
+console.log("Arranca el JS categoría");
+console.log(listaDeProductos);
+
+mostrarProductos(listaDeProductos);
 
 
+function mostrarProductos(productos){
 const gridContainer = document.getElementById("grid-container")
+gridContainer.innerHTML = '';
 
-listaDeProductos.forEach((producto) => {
+productos.forEach((producto) => {
     const colDiv = document.createElement("div");
     colDiv.className = "col-lg-4 col-md-6 mb-3";
 
@@ -50,3 +56,38 @@ listaDeProductos.forEach((producto) => {
     gridContainer.appendChild(colDiv);
 
 })
+}
+
+
+function filtrarPorCategoria(categoria) {
+
+    console.log("Ingresamos a filtrar por categoria")
+    let productosFiltrados = [];
+
+    if(categoria === "all"){
+        productosFiltrados = listaDeProductos;
+    } else {
+        productosFiltrados = listaDeProductos.filter((producto) => {
+            return producto.categoria === categoria;
+        });
+    }
+
+    mostrarProductos(productosFiltrados);
+
+    const categoryLinks = document.querySelectorAll(".category-link");
+    categoryLinks.forEach(function(link) {
+        link.classList.remove("active");
+        if(link.getAttribute("onclick").includes(categoria)){
+            link.classList.add("active")
+        }
+    })
+}
+
+const categoryLinks = document.querySelectorAll('.category-link');
+categoryLinks.forEach(function(link) {
+  link.addEventListener('click', function() {
+    var categoria = this.dataset.category;
+    filtrarPorCategoria(categoria);
+});
+});
+
