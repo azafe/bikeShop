@@ -21,22 +21,19 @@
       <div class="login-box">
         
        
-        <form>
+        <form onsubmit="return login()">
           <label for="Nombre">Nombre o Usuario</label>
           <input
+            id="username"
             name="username"
             type="text"
             placeholder="Nombre o Usuario"
-            pattern="\w{3,16}"
             required
           />
           <label for="Contraseña">Contraseña</label>
           <input
             type="Password"
             placeholder="Contraseña"
-            minlength="8"
-            maxlength="12"
-            pattern="[a-zA-Z0-9]{8,12}"
             required
             id="password"
             name="password"
@@ -211,5 +208,6 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="login.js"></script>
   </body>
 </html>
