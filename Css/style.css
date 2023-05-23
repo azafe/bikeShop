@@ -1,86 +1,181 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  background: url(https://www.tandemaventura.com.ar/imagenes/bici-turismo1.jpg)
-    no-repeat center top;
-  background-size: cover;
-  font-family: sans-serif;
-  height: 100vh;
-}
-
-.container {
-  width: 320px;
-  height: 460px;
-  top: 50%;
-  left: 50%;
-  padding: 70px 30px;
-  position: absolute;
-  transform: translate(-50%, -50%);
   box-sizing: border-box;
-  background-color: rgba(120, 119, 123, 0.3);
-  font-weight: bold;
-  border-radius: 0.5em;
-  box-shadow: inset 1px 1px 22px 4px rgba(0, 0, 0, 0.85);
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
- .logo {
-  margin-top: -3rem;
-  width: 8rem;
-  height: 8rem;
-}
-.logo:hover{
-  transform: scale(1.1);
-}
-.login-box h1 {
-  margin-top: 10px;
-  padding: 0;
-  font-weight: bold;
-  text-align: center;
-  font-size: 22px;
-  
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://cdn.outsideonline.com/wp-content/uploads/2023/02/pinkbike-bike-type-lead_h.jpeg)
+    no-repeat center;
+  background-size: cover;
 }
 
-.login-box label {
-  margin: 0;
-  padding: 0;
-  font-weight: 900;
-  display: block;
-}
-.login-box input {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.login-box input[type="text"],
-.login-box input[type="password"] {
-  border: none;
-  border-bottom: 1px solid #fff;
+.conteiner {
+  position: relative;
+  width: 400px;
+  height: 440px;
   background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 16px;
-}
-
-.login-box input[type="submit"] {
-  outline: none;
-  height: 40px;
-  background: transparent;
-  font-size: 18px;
-  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: heigth 0.2s aese;
 }
 
-.login-box input[type="submit"]:hover {
-  background-color: black;
-  color: whitesmoke;
+.conteiner.active {
+  height: 680px;
 }
-.container-modal a {
+
+.conteiner .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.conteiner.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.conteiner .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.conteiner.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.conteiner .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+.registro a {
+  font-size: 0.9rem;
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin: -15px 0 15px;
   text-decoration: none;
-  font-size: 14px;
-  color: rgb(255, 255, 255);
 }
 
-.colorText {
-  color: rgb(255, 255, 255);
+.registrarse a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.registro label input {
+  accent-color: #162938;
+  margin: -15px 0 15px;
+}
+
+.login-register {
+  font-size: 0.9rem;
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.login-register a {
+  font-size: 1rem;
+  color: #162938;
+  text-decoration: none;
+  font-weight: 500;
   
 }
+
+.login-register a:hover {
+    text-decoration: underline;
+  }

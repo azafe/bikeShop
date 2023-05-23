@@ -34,7 +34,7 @@ productos.forEach((producto) => {
     nombre.textContent = producto.nombre;
 
     const precio = document.createElement("p");
-    precio.className = "card-text d-flex";
+    precio.className = "precioOrig me-3";
     precio.textContent = producto.precio;
 
     const button = document.createElement("a");

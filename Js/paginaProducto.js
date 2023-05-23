@@ -118,6 +118,20 @@ const bicicletas = [
     precio: '49000',
     src: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
   },
+  {
+    marca: 'Top-mega',
+    modelo: 'Bicicleta Top-Mega Black M-Bike 29',
+    categoria: 'mountain bike',
+    precio: '190000',
+    src: 'https://i.postimg.cc/yNLhPzR0/bicitop-MEga.webp'
+  },
+  {
+    marca: 'Top-mega',
+    modelo: 'Bicicleta Top-Tega Nene c/rueditas',
+    categoria: 'ninos',
+    precio: '29000',
+    src: 'https://i.postimg.cc/26Gmh7gk/biciN-3.webp'
+  },
 
   
 ];
