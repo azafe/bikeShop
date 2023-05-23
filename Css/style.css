@@ -28,18 +28,22 @@ body {
   width: 8rem;
   height: 8rem;
 }
+.logo:hover{
+  transform: scale(1.1);
+}
 .login-box h1 {
   margin-top: 10px;
   padding: 0;
   font-weight: bold;
   text-align: center;
   font-size: 22px;
+  
 }
 
 .login-box label {
   margin: 0;
   padding: 0;
-  font-weight: bold;
+  font-weight: 900;
   display: block;
 }
 .login-box input {
@@ -62,6 +66,7 @@ body {
   height: 40px;
   background: transparent;
   font-size: 18px;
+  font-weight: 600;
   border-radius: 20px;
 }
 
@@ -77,4 +82,5 @@ body {
 
 .colorText {
   color: rgb(255, 255, 255);
+  
 }
