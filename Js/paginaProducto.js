@@ -83,20 +83,7 @@ const bicicletas = [
     precio: '140000',
     src: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp'
   },
-  {
-    marca: 'Top-mega',
-    modelo: 'Bicicleta Top-Mega BLue M-Bike 29',
-    categoria: 'mountain bike',
-    precio: '210000',
-    src: 'https://i.postimg.cc/pTyfc1Q4/sunshine-celeste-rojo.webp'
-  },
-  {
-    marca: 'Top-mega',
-    modelo: 'Bicicleta Top-Mega RUTA  R-29',
-    categoria: 'ruta',
-    precio: '384000',
-    src: 'https://i.postimg.cc/jj1sb06w/biciBR4.jpg'
-  },
+    
   {
     marca: 'Top-mega',
     modelo: 'Bicicleta Top-Mega RUTA R-29',
@@ -118,20 +105,8 @@ const bicicletas = [
     precio: '49000',
     src: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
   },
-  {
-    marca: 'Top-mega',
-    modelo: 'Bicicleta Top-Mega Black M-Bike 29',
-    categoria: 'mountain bike',
-    precio: '190000',
-    src: 'https://i.postimg.cc/yNLhPzR0/bicitop-MEga.webp'
-  },
-  {
-    marca: 'Top-mega',
-    modelo: 'Bicicleta Top-Tega Nene c/rueditas',
-    categoria: 'ninos',
-    precio: '29000',
-    src: 'https://i.postimg.cc/26Gmh7gk/biciN-3.webp'
-  },
+ ,
+  ,
 
   
 ];

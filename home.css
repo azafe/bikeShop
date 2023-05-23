@@ -10,16 +10,13 @@ nav {
   overflow: hidden;
 }
 
-.hambur {
-  background-color: white;
-  margin-left: 130px;
-}
+
 
 nav a {
-  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  color: black;
 }
 
 nav form {
@@ -72,6 +69,8 @@ nav button[type="submit"]:hover {
   justify-content: center;
   align-items: center;
   display: flex;
+  margin: 2px;
+  margin-top: 12px;
 }
 
 .susnav {
@@ -190,7 +189,7 @@ footer {
 }
 
 .iconfooter {
-  margin: 8px;
+  margin-right: 20px;
 }
 
 .slider {

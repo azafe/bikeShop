@@ -14,7 +14,7 @@ gridContainer.innerHTML = '';
 
 productos.forEach((producto) => {
     const colDiv = document.createElement("div");
-    colDiv.className = "col-lg-4 col-md-6 mb-3";
+    colDiv.className = "cards-hovC  col-lg-3  ";
 
     const cardDiv = document.createElement("div");
     cardDiv.className = "card shadow-lg";
@@ -27,23 +27,23 @@ productos.forEach((producto) => {
     cardHover.className = "cards-hovC"
 
     const cardBody = document.createElement("div");
-    cardBody.className = "card-body "
+    cardBody.className = "card-body"
 
     const nombre = document.createElement("h5");
-    nombre.className = "card-title";
+    nombre.className = "card-title ";
     nombre.textContent = producto.nombre;
 
     const precio = document.createElement("p");
-    precio.className = "precioOrig me-3";
+    precio.className = "card-text d-flex precioOrig me-3"
     precio.textContent = producto.precio;
 
     const button = document.createElement("a");
     button.href = "#";
-    button.className = "btn btn-success";
-    button.textContent = "Agregar al carrito"
+    button.className = "btn btn-success d-flex justify-content-center";
+    button.textContent = "AGREGAR AL CARRITO"
 
     cardBody.appendChild(nombre);
-    cardBody.appendChild(precio);
+    cardBody.appendChild (precio);
     cardBody.appendChild(button);
 
     cardDiv.appendChild(imagen);

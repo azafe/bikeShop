@@ -159,6 +159,8 @@ nav button[type="submit"]:hover {
   justify-content: center;
   align-items: center;
   display: flex;
+  margin: 2px;
+  margin-top: 12px;
 }
 
 .susnav {
@@ -203,10 +205,11 @@ footer {
   justify-content: center;
 }
 
-.iconfooter {
-  margin: 8px;
-  
-}
+  .iconfooter {
+    margin-right: 20px;
+  }
+    
+
 
 
 
