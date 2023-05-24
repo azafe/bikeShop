@@ -1,15 +1,50 @@
 export let listaDeProductos = [];
 
+
+listaDeProductos = [
+    {
+        id: '1',
+        nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
+        categoria: 'mountain bike',
+        precio: '140000',
+        imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp'
+    },
+    {
+        id: '2',
+        nombre: 'Bicicleta Top-Mega RUTA R-29',
+        categoria: 'ruta',
+        precio: '260000',
+        imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp'
+    },
+    {
+        id: '3',
+        nombre: 'Bicicleta Top-Tega Nena c/rueditas',
+        categoria: 'ninos',
+        precio: '36000',
+        imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp'
+    },
+    {
+        id: '4',
+        nombre: 'Bicicleta Top-Tega Free-Style unisex',
+        categoria: 'ninos',
+        precio: '49000',
+        imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
+    },    
+  ];
+
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
 const categoriaInput = document.getElementById("categoria")
-const descripcionInput = document.getElementById("descripcion");
 const precioInput = document.getElementById("precio");
 const imagenInput = document.getElementById("imagen");
 const agregarButton = document.getElementById("agregar");
 const tableBody = document.getElementById("table-body")
 const agregarProductosForm = document.getElementById("agregarProductosForm");
 const listaProductos = document.getElementById("lista-productos");
+
+
+
+//actualizarTabla();
 
 
 if(agregarButton){
@@ -23,6 +58,8 @@ listaProductos.addEventListener("click", editarProducto);
 if(listaProductos){
 listaProductos.addEventListener("click", eliminarProducto);
 }
+
+console.log(listaDeProductos);
 
 
 
@@ -58,7 +95,6 @@ function agregarProducto(e) {
     //Obtenemos los valores del formulario
     const nombre = nombreInput.value;
     const categoria = categoriaInput.value;
-    const descripcion = descripcionInput.value;
     const precio = precioInput.value;
     const imagen = imagenInput.value;
     const mode = agregarProductosForm.dataset.mode;
@@ -68,7 +104,7 @@ function agregarProducto(e) {
 
     if(mode === "add"){
         const id = uuidv4();
-        const producto = {id, nombre, categoria, descripcion, precio, imagen};
+        const producto = {id, nombre, categoria, precio, imagen};
         listaDeProductos.push(producto);
     } else if (mode ==="edit"){
         agregarButton.setAttribute("class", "btn btn-primary")
@@ -77,7 +113,6 @@ function agregarProducto(e) {
             const producto = listaDeProductos[index];
             producto.nombre = nombre;
             producto.categoria = categoria;
-            producto.descripcion = descripcion;
             producto.precio = precio;
             producto.imagen = imagen;
         }
@@ -102,7 +137,6 @@ function editarProducto(e){
 
             nombreInput.value = producto.nombre;
             categoriaInput.value = producto.categoria;
-            descripcionInput.value = producto.descripcion;
             precioInput.value = producto.precio;
             imagenInput.value = producto.imagen;
 
@@ -158,7 +192,7 @@ function actualizarTabla(){
     tableBody.innerHTML = "";
     }
 
-    listaDeProductos.forEach((item, index) => {
+    listaDeProductos.forEach((item) => {
 
         //Creamos los elementos de la tabla
         const fila = document.createElement("tr");
@@ -168,9 +202,6 @@ function actualizarTabla(){
 
         const categoriaCelda = document.createElement("td");
         categoriaCelda.textContent = item.categoria;
-
-        const descripcionCelda = document.createElement("td");
-        descripcionCelda.textContent = item.descripcion;
 
         const precioCelda = document.createElement("td");
         precioCelda.textContent = item.precio;
@@ -196,7 +227,6 @@ function actualizarTabla(){
 
         fila.appendChild(nombreCelda);
         fila.appendChild(categoriaCelda);
-        fila.appendChild(descripcionCelda);
         fila.appendChild(precioCelda);
         fila.appendChild(imagenCelda);
         fila.appendChild(editarButton);
@@ -209,6 +239,7 @@ function actualizarTabla(){
     })
 
     localStorage.setItem("productos", JSON.stringify(listaDeProductos));
+    console.log(listaDeProductos);
 }
 
 const prodcutosLocalStorage = JSON.parse(localStorage.getItem("productos"));
