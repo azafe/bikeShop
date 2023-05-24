@@ -1,0 +1,13 @@
+.category-link {
+    cursor: pointer;
+  }
+  
+  .category-link.active {
+    font-weight: bold;
+  }
+
+  .filtro{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+  }

@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(https://cdn.outsideonline.com/wp-content/uploads/2023/02/pinkbike-bike-type-lead_h.jpeg)
+    no-repeat center;
+  background-size: cover;
+}
+
+.conteiner {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: heigth 0.2s aese;
+}
+
+.conteiner.active {
+  height: 680px;
+}
+
+.conteiner .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.conteiner.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.conteiner .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.conteiner.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.conteiner .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  width: 5rem;
+  height: 5rem;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+.registro a {
+  font-size: 0.9rem;
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin: -15px 0 15px;
+  text-decoration: none;
+}
+
+.registrarse a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.registro label input {
+  accent-color: #162938;
+  margin: -15px 0 15px;
+}
+
+.login-register {
+  font-size: 0.9rem;
+  color: #162938;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.login-register a {
+  font-size: 1rem;
+  color: #162938;
+  text-decoration: none;
+  font-weight: 500;
+  
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+  }
+
+
+  /* navbar */
+  nav {
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  
+  nav a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav form {
+    display: flex;
+    align-items: end;
+    margin-top: 8px;
+    margin-right: 16px;
+    justify-content: center;
+  }
+  
+  nav form {
+    display: flex;
+    align-items: end;
+    margin-top: 8px;
+    margin-right: 16px;
+    justify-content: center;
+  }
+  nav forma {
+    display: flex;
+    margin-top: 8px;
+    margin-right: 16px;
+  }
+  
+  nav input[type="text"] {
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  nav button[type="submit"] {
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ddd;
+    margin-left: -5px;
+  }
+  
+  nav button[type="submit"]:hover {
+    background-color: #bbb;
+    cursor: pointer;
+  }
+  
+  .highlight {
+    background-color: yellow;
+  }
+  
+  .logonav {
+    height: 70px;
+    border-radius: 10px 10px 10px;
+  }
+  
+  .loginnav {
+    border-radius: 80%;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 2px;
+    margin-top: 12px;
+  }
+  
+  .susnav {
+    border-radius: 80%;
+    height: 40px;
+    color: black;
+  
+  }
+  
+  .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
