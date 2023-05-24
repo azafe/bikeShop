@@ -3,9 +3,9 @@ import {listaDeProductos} from "./admin.js"
 
 
 console.log("Arranca el JS categoría");
-console.log(listaDeProductos);
 
 mostrarProductos(listaDeProductos);
+
 
 
 function mostrarProductos(productos){
