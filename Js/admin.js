@@ -5,28 +5,28 @@ listaDeProductos = [
     {
         id: '1',
         nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
-        categoria: 'mountain bike',
+        categoria: 'Mountain Bike',
         precio: '140000',
         imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp'
     },
     {
         id: '2',
         nombre: 'Bicicleta Top-Mega RUTA R-29',
-        categoria: 'ruta',
+        categoria: 'Ruta',
         precio: '260000',
         imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp'
     },
     {
         id: '3',
         nombre: 'Bicicleta Top-Tega Nena c/rueditas',
-        categoria: 'ninos',
+        categoria: 'Niños',
         precio: '36000',
         imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp'
     },
     {
         id: '4',
         nombre: 'Bicicleta Top-Tega Free-Style unisex',
-        categoria: 'ninos',
+        categoria: 'Niños',
         precio: '49000',
         imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
     },    
@@ -44,7 +44,7 @@ const listaProductos = document.getElementById("lista-productos");
 
 
 
-//actualizarTabla();
+actualizarTabla();
 
 
 if(agregarButton){
