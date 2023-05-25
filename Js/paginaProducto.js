@@ -2,6 +2,8 @@
 
 import {listaDeProductos} from "./admin.js"
 
+
+
 console.log("Entraste a pagina productos");
 console.log(listaDeProductos);
 const form = document.querySelector("form");
@@ -144,7 +146,11 @@ mostrarBicicletas(listaDeProductos);
  )
  mostrarBicicletas(bicicletasFiltradasPrecios);
 }else{
-  alert("Por favor, completa tanto el mínimo como el máximo con valores numéricos.")
+  iziToast.warning({
+    position: 'topCenter',
+    title: 'Hey',
+    message: 'Debes completar los campos mínimo y máximo'
+});
  }
   
  }
