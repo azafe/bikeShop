@@ -5,7 +5,28 @@
 
 }
 
+/* Sections */
 
+.section-1 {
+  padding-bottom: 50px;
+}
+
+.section-2 {
+  padding-top: 50px;
+}
+
+.section-3 {
+}
+
+.section-4{
+  padding: 0px;
+}
+
+.section-5{
+  padding: 50px;
+}
+
+/* Fin Sections */
 
 /* Comienzo del navbar transparente */
 
@@ -27,7 +48,7 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  animation: animate 15s infinite;
+  animation: animate 18s infinite;
   /* transform: scale(1);  */
 }
 
@@ -59,23 +80,18 @@
   }
 }
 
-@media (max-width: 767px) {
-  .slider-container {
-    padding-bottom: 75%; /* Ajusta la proporción en pantallas más pequeñas */
-  }
-}
 
 .main-heading {
   position: absolute;
-  top: 45%;
-  left: 20px; /* Ajusta el valor de left según tus preferencias */
+  top: 40%;
+  left: 20px; 
   transform: translate(0, -50%);
   z-index: 1;
-  font-size: 36px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  font-size: 50px; 
   font-weight: bold;
   color: #fff;
   text-align: left; /* Ajusta el alineamiento del texto a la izquierda */
-  line-height: 1.5; /* Ajusta el espaciado entre líneas según tus preferencias */
+  line-height: 1.2; /* Ajusta el espaciado entre líneas según tus preferencias */
   max-width: 80%; /* Ajusta el ancho máximo del contenedor según tus preferencias */
   display: inline-block; /* Permite que el texto se divida en múltiples líneas */
   word-wrap: break-word; /* Permite que las palabras se dividan en líneas si es necesario */

@@ -11,7 +11,7 @@ listaDeProductos = [
     },
     {
         id: '2',
-        nombre: 'Bicicleta Top-Mega RUTA R-29',
+        nombre: 'Bicicleta Top-Mega RUTA R-2933',
         categoria: 'Ruta',
         precio: '260000',
         imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp'
