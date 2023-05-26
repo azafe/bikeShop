@@ -5,6 +5,92 @@
 
 }
 
+
+
+/* Comienzo del navbar transparente */
+
+.main-heading {
+  position: absolute;
+  top: 45%;
+  left: 20px; /* Ajusta el valor de left según tus preferencias */
+  transform: translate(0, -50%);
+  z-index: 1;
+  font-size: 36px; /* Ajusta el tamaño de la fuente según tus preferencias */
+  font-weight: bold;
+  color: #fff;
+  text-align: left; /* Ajusta el alineamiento del texto a la izquierda */
+  line-height: 1.5; /* Ajusta el espaciado entre líneas según tus preferencias */
+  max-width: 80%; /* Ajusta el ancho máximo del contenedor según tus preferencias */
+  display: inline-block; /* Permite que el texto se divida en múltiples líneas */
+  word-wrap: break-word; /* Permite que las palabras se dividan en líneas si es necesario */
+}
+
+
+.header.hero-header {
+  overflow-x: hidden;
+}
+
+
+.hero-header {
+  position: relative;
+  height: 100vh;
+}
+
+.hero-header img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 999;
+}
+
+.navbar .container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.navbar-brand .logonav {
+  max-height: 80px;
+  width: auto;
+}
+
+.navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #fff;
+}
+
+.loginnav {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.loginnav:hover {
+  color: #fff;
+}
+
+
+
+/* Fin del navbar transparente */
+
+
+
+
+
 nav {
   background-color: black;
   overflow: hidden;
@@ -160,9 +246,6 @@ main {
   border-radius: 1rem;
 }
 
-.containerimg img:hover {
-  transform: scale(1.1);
-}
 
 footer {
   font-family: Georgia, "Times New Roman", Times, serif;
