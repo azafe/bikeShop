@@ -9,6 +9,62 @@
 
 /* Comienzo del navbar transparente */
 
+/* Slider automático */
+
+.slidr-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Proporción 16:9 para el contenedor */
+}
+
+.slidr {
+  background-image: url(img/fondo-1.jpg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: animate 15s infinite;
+  /* transform: scale(1);  */
+}
+
+.container-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+
+}
+
+@keyframes animate {
+
+  33% {
+    background-image: url(img/fondo-4.jpg);
+    background-size: cover;
+    
+  }
+
+  66% {
+    background-image: url(img/fondo-2.jpg);
+    background-size: cover;
+
+  }
+
+  100% {
+    background-image: url(img/fondo-1.jpg);
+    background-size: cover;
+    /* transform: scale(1.1); */
+
+  }
+}
+
+@media (max-width: 767px) {
+  .slider-container {
+    padding-bottom: 75%; /* Ajusta la proporción en pantallas más pequeñas */
+  }
+}
+
 .main-heading {
   position: absolute;
   top: 45%;
