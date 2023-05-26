@@ -259,6 +259,29 @@ footer {
   
 
 }
+
+.botonLimpiar{
+  font-weight: 600;
+  color: white;
+  background-color: #263e3e;
+  font-size: 15px;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #263e3e;
+}
+
+/* stylo de mensaje no encontramos producto*/
+
+#bicicletas-container {
+  
+  margin-top: 30px;
+  font-size: x-large;
+  color: #263e3e;
+  
+}
 /* fin stylo filtro */
 
 
