@@ -78,7 +78,9 @@ function removeHighlights() {
   });
 }
 
-// js principal
+/* js de cards y crud*/
+
+
 const bicicletasContainer = document.getElementById('bicicletas-container');
 const filtroSelect = document.getElementById('opFil');
 
@@ -126,38 +128,82 @@ filtroSelect.addEventListener('change', filtrarBicicletas);
 mostrarBicicletas(listaDeProductos);
 
 
-//filtro precio js//
+//filtros js//
 
 
- function filtrarPorPrecio() {
-  const minimo = parseFloat(document.getElementById("minimo").value);
-  const maximo = parseFloat(document.getElementById("maximo").value);
+function filtrarPorPrecio() {
+  const minimoInput = document.getElementById("minimo");
+  const maximoInput = document.getElementById("maximo");
+  const minimo = parseFloat(minimoInput.value);
+  const maximo = parseFloat(maximoInput.value);
 
 
-  if (minimo && maximo && !isNaN(minimo) && !isNaN(maximo)) {
-  const bicicletasContainer = document.getElementById("bicicletas-container");
-  const bicicletasFiltradasPrecios=[]
-  listaDeProductos.forEach((bicicleta)=>{
-    const precio=bicicleta.precio
-    if(precio >= minimo && precio <= maximo ){
-      bicicletasFiltradasPrecios.push(bicicleta)      
-    } else {}
+
+  if (isNaN(minimo) || minimo <= 0) {
+    minimoInput.classList.add("error");
+    return;
+  } else {
+    minimoInput.classList.remove("error");
   }
- )
- mostrarBicicletas(bicicletasFiltradasPrecios);
-}else{
-  iziToast.warning({
-    position: 'topCenter',
-    title: 'Hey',
-    message: 'Debes completar los campos mínimo y máximo'
-});
- }
+
+  if (isNaN(maximo) || maximo <= 0) {
+    maximoInput.classList.add("error");
+    return;
+  } else {
+    maximoInput.classList.remove("error");
+  }
+
+  const bicicletasContainer = document.getElementById("bicicletas-container");
+  const bicicletasFiltradasPrecios = [];
+  bicicletas.forEach((bicicleta) => {
+    const precio = bicicleta.precio;
+    if (precio >= minimo && precio <= maximo) {
+      bicicletasFiltradasPrecios.push(bicicleta);
+    }
+  });
+
+  mostrarBicicletas(bicicletasFiltradasPrecios);
+
+
   
- }
 
+  if (bicicletasFiltradasPrecios.length === 0) {
+    bicicletasContainer.innerHTML = "LO SENTIMOS, NO HEMOS ENCONTRADO RESULTADOS PARA TU BUSQUEDA.";
+  }
+}
 
-// Agregar un evento click al botón de búsqueda
+function limpiarFiltros() {
+  const minimoInput = document.getElementById("minimo");
+  const maximoInput = document.getElementById("maximo");
+  minimoInput.value = "";
+  maximoInput.value = "";
+  minimoInput.classList.remove("error");
+  maximoInput.classList.remove("error");
+  mostrarBicicletas(bicicletas); 
+}
+
+const minimoInput = document.getElementById("minimo");
+const maximoInput = document.getElementById("maximo");
+
+minimoInput.addEventListener("input", function () {
+  if (parseFloat(this.value) < 0) {
+    this.value = "";
+  }
+});
+
+maximoInput.addEventListener("input", function () {
+  if (parseFloat(this.value) < 0) {
+    this.value = "";
+  }
+});
+
 const botonFil = document.querySelector(".botonFil");
 botonFil.addEventListener("click", filtrarPorPrecio);
+
+const botonLimpiar = document.querySelector(".botonLimpiar");
+botonLimpiar.addEventListener("click", limpiarFiltros)
+
+
+
 
 
