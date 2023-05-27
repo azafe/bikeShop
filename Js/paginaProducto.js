@@ -2,6 +2,8 @@
 
 import {listaDeProductos} from "./admin.js"
 
+console.log("Se estra ejecutando el js")
+
 const listaDeFavoritos =[];
 
 console.log("Entraste a pagina productos");
@@ -179,7 +181,7 @@ function filtrarPorPrecio() {
 
   const bicicletasContainer = document.getElementById("bicicletas-container");
   const bicicletasFiltradasPrecios = [];
-  bicicletas.forEach((bicicleta) => {
+  listaDeProductos.forEach((bicicleta) => {
     const precio = bicicleta.precio;
     if (precio >= minimo && precio <= maximo) {
       bicicletasFiltradasPrecios.push(bicicleta);
@@ -203,7 +205,7 @@ function limpiarFiltros() {
   maximoInput.value = "";
   minimoInput.classList.remove("error");
   maximoInput.classList.remove("error");
-  mostrarBicicletas(bicicletas); 
+  mostrarBicicletas(listaDeProductos); 
 }
 
 const minimoInput = document.getElementById("minimo");

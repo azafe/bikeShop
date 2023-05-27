@@ -1,6 +1,7 @@
 export let listaDeProductos = [];
 
 
+
 listaDeProductos = [
     {
         id: '1',
