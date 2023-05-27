@@ -7,28 +7,34 @@ listaDeProductos = [
         nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
         categoria: 'Mountain Bike',
         precio: '140000',
-        imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp'
+        imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp',
+        isFavorite: true,
     },
     {
         id: '2',
         nombre: 'Bicicleta Top-Mega RUTA R-2933',
         categoria: 'Ruta',
         precio: '260000',
-        imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp'
+        imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
+        isFavorite: false,
+
     },
     {
         id: '3',
         nombre: 'Bicicleta Top-Tega Nena c/rueditas',
         categoria: 'Niños',
         precio: '36000',
-        imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp'
+        imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp',
+        isFavorite: true,
+
     },
     {
         id: '4',
         nombre: 'Bicicleta Top-Tega Free-Style unisex',
         categoria: 'Niños',
         precio: '49000',
-        imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp'
+        imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp',
+        isFavorite: false,
     },    
   ];
 

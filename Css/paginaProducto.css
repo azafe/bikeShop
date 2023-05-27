@@ -11,6 +11,20 @@
 
 
 /* inicio cards */
+
+.corazon{
+font-size: 22px;
+transition: color 0.3s;
+}
+
+.corazon-rojo{
+  color: red;
+}
+
+.corazon:hover{
+  color: red;
+}
+
 .card-body .btn-success {
   border-radius: 5px;
   background-color: #263e3e;
@@ -41,7 +55,7 @@
 
 .precioOrig {
   padding-left: 25%;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
   font-size: 1.5rem;
   font-weight: 400;
   color: #263e3e;

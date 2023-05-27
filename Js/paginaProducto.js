@@ -2,7 +2,7 @@
 
 import {listaDeProductos} from "./admin.js"
 
-
+const listaDeFavoritos =[];
 
 console.log("Entraste a pagina productos");
 console.log(listaDeProductos);
@@ -87,7 +87,13 @@ const filtroSelect = document.getElementById('opFil');
 const mostrarBicicletas = (listaDeProductos) => {
   bicicletasContainer.innerHTML = '';
 
+  let corazonClass;
   listaDeProductos.forEach(bicicleta => {
+
+    
+
+    corazonClass = bicicleta.isFavorite ? "fas fa-heart corazon-rojo iconCorazon" : "far fa-heart iconCorazon"
+
     const tarjeta = `
       <div class="cards-hovC col-sm-12 col-md-3 col-lg-3 mb-3 mt-3">
         <div class="card shadow-lg">
@@ -96,7 +102,10 @@ const mostrarBicicletas = (listaDeProductos) => {
           <div class="card-body ${bicicleta.categoria}">
             <h6 class="card-title"><b> ${bicicleta.nombre}</b><img src="https://i.postimg.cc/W1wFMSLW/icono-topmega2.png" alt="topmega"></h6>
             <div class="card-text d-flex">
-              <h5 class="precioOrig me-3">$${bicicleta.precio}</h5>
+              <div class="d-flex align-items-center">
+                <i class="${corazonClass}"  data-producto-id="${bicicleta.id}"></i>
+                <h5 class="precioOrig me-3">$${bicicleta.precio}</h5>
+              </div>
             </div>
             <div class="d-flex justify-content-center">
               <a href="../html/carrito.html" class="btn btn-success">AGREGAR AL CARRITO</a>
@@ -107,8 +116,23 @@ const mostrarBicicletas = (listaDeProductos) => {
     `;
 
     bicicletasContainer.insertAdjacentHTML('beforeend', tarjeta);
+
+    const corazon = document.querySelector('.iconCorazon')
+
+    if(corazon){
+    corazon.addEventListener("click", favorite);
+}
+
   });
 };
+
+//Función Favoritos
+
+
+
+function favorite(){
+  console.log("Ingresamos a la función de favoritos");
+}
 
 const filtrarBicicletas = () => {
   const categoriaSeleccionada = filtroSelect.value;
@@ -161,3 +185,24 @@ const botonFil = document.querySelector(".botonFil");
 botonFil.addEventListener("click", filtrarPorPrecio);
 
 
+
+
+// function favorite(productoId){
+//   console.log("Ingresamos a la función de favoritos");
+//   const listaDeFavoritos = [];
+
+//   const producto = listaDeProductos.find(producto => producto.id === productoId);
+
+//   if(producto){
+//     const index = listaDeFavoritos.indexOf(producto);
+//     if (index !== -1){
+//       listaDeFavoritos.splice(index,1);
+//     }
+//   }else{
+//     listaDeFavoritos.push(producto);
+//   }
+  
+
+//   const corazon = $(`i[data-producto-id="${productoId}"]`);
+//   corazon.toggleClass('far fas');
+// }
