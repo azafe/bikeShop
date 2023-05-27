@@ -21,3 +21,7 @@
       max-width: 100px; /* Ajusta el ancho máximo según tus necesidades */
       height: auto; /* Mantener la proporción de aspecto */
     }
+
+.colorFondo {
+  background-color: #ededed;
+}

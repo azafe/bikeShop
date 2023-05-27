@@ -6,38 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="/bikeShop/src/1684198467.ico">
-    <link rel="stylesheet" href="home.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="home.css">
     <title>The Bike Shop</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+
+<section class="section-1">
+        <Header class="hero-header ">
+            <h1 class="main-heading"> Descubre el placer <br> de pedalear  </h1> 
+            <div class="container-fluid container-no-padding">
+                <div class="row">
+                  <div class="col-12 col-md-12 ">
+                    <div class="slidr-container">
+                      <div class="slidr"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html"><img src="../bikeShop/img/logo.png" alt="Logo" class="logonav" /></a>
+            <a class="navbar-brand" href="/index.html"><img src="img/logo.png" alt="Logo" class="logonav" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon bg-white"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-nav mx-auto">
+                    <li class="nav-item  m-lg-3">
                         <a class="nav-link active text-white" aria-current="page" href="/bikeShop/index.html">Inico</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item m-lg-3">
                         <a class="nav-link active text-white" aria-current="page"
                             href="/bikeShop/html/paginaProducto.html">Bicicletas</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item m-lg-3">
                         <a class="nav-link active text-white" aria-current="page"
                             href="/bikeShop/html/error404.html">Accesorios</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item m-lg-3">
                         <a class="nav-link active text-white" aria-current="page"
                             href="/bikeShop/html/error404.html">Indumentaria</a>
                     </li>
@@ -58,32 +72,11 @@
                 </div>
             </div>
         </div>
-    </nav>
-    <div id="content">
-        <div id="carouselExampleAutoplaying" class="carousel slide carruindex" data-bs-ride="carousel">
-            <div class="carousel-inner ">
-                <div class="carousel-item active ">
-                    <img src="src/1.png" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/src/2.png" class="d-block w-100" alt="">
-                </div>
-                <div class="carousel-item">
-                    <img src="/src/3.png" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        </nav>
+        </Header>
+</section>
 
+<section class="section-2">
         <div class="cuadrado">
             <div class="conte">
                 <div class="contenido">
@@ -125,6 +118,9 @@
                 </div>
             </div>
         </div>
+</section>
+
+<section class="section-3">
         <main>
             <div class="containerimg">
                 <a href="/bikeShop/html/error404.html" class="cardsa"><img
@@ -151,7 +147,9 @@
     </div>
     </div>
     </main>
+</section>
 
+<section class="section-4">
     <div class="slider">
         <div class="slide-track">
             <div class="slide p-3">
@@ -243,6 +241,9 @@
 
         </div>
     </div>
+</section>
+
+<section class="section-5">
     <div class="contenedore">
         <a href="/bikeShop/html/paginaProducto.html" class="btn btn-3">Ver todos los productos</a>
     </div>
@@ -264,16 +265,11 @@
             </svg>
         </a>
     </div>
-    <section>
-        <div style="height: 150px; overflow: hidden">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%">
-                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: rgba(27, 27, 27, 1)"></path>
-            </svg>
-        </div>
-    </section>
+</section>
 
-    <footer>
+
+
+<footer>
         <div class="container-fluid">
             <div class="container-fluid">
                 <div class="row p-1 pb-1 text-white text-center">
@@ -354,10 +350,10 @@
                 </div>
             </div>
         </div>
-    </footer>
-    </div>
-    <script src="/bikeShop/js.js"></script>
+</footer>
 
+
+<script src="/bikeShop/js.js"></script>
 </body>
 
 </html>
