@@ -227,7 +227,8 @@ const botonFil = document.querySelector(".botonFil");
 botonFil.addEventListener("click", filtrarPorPrecio);
 
 const botonLimpiar = document.querySelector(".botonLimpiar");
-botonLimpiar.addEventListener("click", limpiarFiltros);
+botonLimpiar.addEventListener("click", limpiarFiltros)
+
 
 
 

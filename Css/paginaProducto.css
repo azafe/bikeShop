@@ -72,7 +72,7 @@
 
 .cuadroPre {
   display: flex;
-  margin-top: 5%
+  margin-top: 0%
 }
 
 .min {
@@ -224,21 +224,21 @@ footer {
 }
 
 .tituFil.tituSub {
-  margin-bottom: 5%;
+  margin-bottom:0px;
   font-weight: bolder;
 }
 
 .filtro-container {
-  margin-top: 10%;
+  margin-top: 5%;
 
 }
 
 .tituSube {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .botonFil {
-  margin-top: 4%;
+  margin-top: 2%;
   border-radius: 5px;
   background-color: #263e3e;
   border-color: #263e3e;
@@ -248,7 +248,7 @@ footer {
   font-size: 15px;
 }
 .selB{
-  margin-top: 4%;
+  margin-top: 0%;
   border-radius: 5px;
   background-color: #263e3e;
   border-color: #263e3e;
@@ -267,7 +267,7 @@ footer {
   font-size: 15px;
   width: 50%;
   margin-top: 20px;
-  margin-left: 60px;
+  margin-left: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   border-color: #263e3e;
