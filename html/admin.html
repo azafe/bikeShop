@@ -26,29 +26,29 @@
                 <h5 class="card-title">Agregar Producto</h5>
                 <form id="agregarProductosForm" data-mode="add">
                     <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="nombre" name="nombre"> 
+                      <label for="nombre" class="form-label">Nombre:</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre">
                     </div>
                     <div class="mb-3">
-                        <label for="categoria" class="form-label">Categoría: </label>
-                        <input type="text"  class="form-control" id="categoria" name="categoria"> 
+                      <label for="categoria" class="form-label">Categoría:</label>
+                      <select class="form-select" id="categoria" name="categoria">
+                        <option value="Mountain Bike">Mountain bike</option>
+                        <option value="Ruta">Ruta</option>
+                        <option value="Niños">Niños</option>
+                      </select>
                     </div>
                     <div class="mb-3">
-                        <label for="descripcion" class="form-label">Descripción: </label>
-                        <input type="text"  class="form-control" id="descripcion" name="descripcion"> 
+                      <label for="precio" class="form-label">Precio: $</label>
+                      <input type="number" class="form-control" id="precio" name="precio">
                     </div>
                     <div class="mb-3">
-                        <label for="precio" class="form-label">Precio: $</label>
-                        <input type="number" class="form-control" id="precio" name="precio"> 
-                    </div>
-                    <div class="mb-3">
-                        <label for="imagen" class="form-label">Imágen: </label>
-                        <input type="text"  class="form-control"  id="imagen" name="imagen"><br>
+                      <label for="imagen" class="form-label">Imagen:</label>
+                      <input type="text" class="form-control" id="imagen" name="imagen"><br>
                     </div>
                     <div class="container">
-                        <button type="button" class="btn btn-primary" id="agregar">Agregar</button>
+                      <button type="button" class="btn btn-primary" id="agregar">Agregar</button>
                     </div>
-                </form>
+                  </form>
             </div>
             </div>
         </div>
@@ -74,7 +74,6 @@
                             <tr>
                                 <th>Nombre</th>
                                 <th>Categoría</th>
-                                <th>Descripción</th>
                                 <th>Precio</th>
                                 <th>Imágen</th>
                                 <th>Acciones</th>
