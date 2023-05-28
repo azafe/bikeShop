@@ -112,7 +112,7 @@ const mostrarBicicletas = (listaDeProductos) => {
               </div>
             </div>
             <div class="d-flex justify-content-center">
-              <a href="../html/carrito.html" class="btn btn-success">AGREGAR AL CARRITO</a>
+              <a href="/html/error404.html" class="btn btn-success">AGREGAR AL CARRITO</a>
             </div>
           </div>
         </div>
