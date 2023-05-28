@@ -365,7 +365,7 @@ footer {
   display: flex;
   -webkit-animation: scroll 40s linear infinite;
   animation: scroll 40s linear infinite;
-  width: calc(200px * 28);
+  width: calc(200px * 30);
 }
 
 .slider .slide {
@@ -384,8 +384,8 @@ footer {
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-200px * 7));
-    transform: translateX(calc(-200px * 7));
+    -webkit-transform: translateX(calc(-200px * 10));
+    transform: translateX(calc(-200px * 10));
   }
 }
 
