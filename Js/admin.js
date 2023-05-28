@@ -1,7 +1,7 @@
-export let listaDeProductos = [];
+export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 
-
+if(listaDeProductos.length === 0){
 listaDeProductos = [
     {
         id: '1',
@@ -13,7 +13,7 @@ listaDeProductos = [
     },
     {
         id: '2',
-        nombre: 'Bicicleta Top-Mega RUTA R-2933',
+        nombre: 'Bicicleta Top-Mega RUTA R-2933 Aaaa',
         categoria: 'Ruta',
         precio: '260000',
         imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
@@ -38,6 +38,8 @@ listaDeProductos = [
         isFavorite: false,
     },    
   ];
+}
+
 
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
@@ -199,6 +201,11 @@ function actualizarTabla(){
     tableBody.innerHTML = "";
     }
 
+
+    localStorage.setItem("productos", JSON.stringify(listaDeProductos));
+    console.log(listaDeProductos);
+
+
     listaDeProductos.forEach((item) => {
 
         //Creamos los elementos de la tabla
@@ -245,14 +252,13 @@ function actualizarTabla(){
 
     })
 
-    localStorage.setItem("productos", JSON.stringify(listaDeProductos));
-    console.log(listaDeProductos);
+    
 }
 
-const prodcutosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
-if(prodcutosLocalStorage){
-    listaDeProductos = prodcutosLocalStorage;
+if(productosLocalStorage){
+    listaDeProductos = productosLocalStorage;
     actualizarTabla();
 }
 
