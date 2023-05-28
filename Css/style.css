@@ -5,7 +5,7 @@
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body {
+.loginfondo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,14 +72,6 @@ body {
   cursor: pointer;
 }
 
-.logo {
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  transform: translate(-50%, -50%);
-  width: 5rem;
-  height: 5rem;
-}
 
 .input-box {
   position: relative;
@@ -268,3 +260,30 @@ body {
     align-items: center;
   }
   
+  footer {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 27, 27, 1);
+  }
+  
+  .logoFooter {
+    margin-top: 3rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10%;
+  
+  }
+  
+  .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .iconfooter{
+    margin: 8px;
+  }
+
