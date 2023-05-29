@@ -5,6 +5,29 @@
 
 }
 
+
+
+
+.button-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #263e3e;
+  border-color: #263e3e;
+  padding: 0px 15px;
+  border-radius: 10px;
+}
+
+.btn-success:hover{
+  background-color: #20ba5a;
+}
+
+.button-content i {
+  margin-right: 10px;
+}
+
+
+
 /* Sections */
 
 .section-1 {
@@ -397,7 +420,6 @@ footer {
   position: relative;
   text-decoration: none;
   color: #fff;
-  letter-spacing: 5px;
   text-indent: 10px;
   z-index: 2;
 }

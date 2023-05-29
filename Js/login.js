@@ -1,24 +1,36 @@
+export let isAdmin = false;
+
 const conteiner = document.querySelector(".conteiner");
 const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 const btnPopup = document.querySelector(".btnLogin-popup");
 const iconClose = document.querySelector(".icon-close");
 
+
+
+if(registerLink){
 registerLink.addEventListener("click", () => {
   conteiner.classList.add("active");
 });
+}
 
+if(loginLink){
 loginLink.addEventListener("click", () => {
   conteiner.classList.remove("active");
 });
+}
 
+if(btnPopup){
 btnPopup.addEventListener("click", () => {
   conteiner.classList.add("active-popup");
 });
+}
 
+if(iconClose){
 iconClose.addEventListener("click", () => {
   conteiner.classList.remove("active-popup");
 });
+}
 
 /*Usuario admin*/
 
@@ -30,6 +42,7 @@ function login() {
 
   if (userName === "admin" && password === "admin") {
     window.location.href = "../html/admin.html";
+    isAdmin = true;
     return false;
   } else {
     alert("Usuario inexistente");
@@ -105,8 +118,10 @@ inputs.forEach((input) => {
 });
 
 
+if(formulario){
 formulario.addEventListener('submit', (e) => {
   e.preventDefault();
 })
+}
 
 
