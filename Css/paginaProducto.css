@@ -233,6 +233,10 @@ footer {
 
 /* stylo filtro */
 
+.tituloIniBi{
+ margin-bottom: 10%;
+}
+
 .filtro {
   gap: 10px;
   padding: 0%;
@@ -282,7 +286,7 @@ footer {
   font-size: 15px;
   width: 50%;
   margin-top: 20px;
-  margin-left: 10px;
+  margin-right: 150px;
   margin-bottom: 10px;
   border-radius: 5px;
   border-color: #263e3e;
