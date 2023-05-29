@@ -7,8 +7,7 @@
 
 
 
-
-.button-content {
+.button-admin{
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +15,19 @@
   border-color: #263e3e;
   padding:10px;
   border-radius: 10px;
+}
+
+
+.button-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-color: #263e3e;
+  padding:6px 20px 6px 20px;
+  font-size: medium;
+  
+  border-radius: 8px;
 }
 
 .btn-success:hover{
