@@ -1,10 +1,7 @@
-export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 
-
-
-listaDeProductos = [
-    {
+export let listaDeProductos = [
+    {    
         id: '1',
         nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
         categoria: 'Mountain Bike',
@@ -39,8 +36,8 @@ listaDeProductos = [
         isFavorite: false,
     },    
   ];
-
-
+  
+ listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
@@ -256,12 +253,12 @@ function actualizarTabla(){
     
 }
 
-const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
+// const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
 
-if(productosLocalStorage){
-    listaDeProductos = productosLocalStorage;
-    actualizarTabla();
-}
+// if(productosLocalStorage){
+//     listaDeProductos = productosLocalStorage;
+//     actualizarTabla();
+// }
 
 
  //Función para generar un id unico
