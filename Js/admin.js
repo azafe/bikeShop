@@ -1,7 +1,6 @@
 export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 
-if(listaDeProductos.length === 0){
 listaDeProductos = [
     {
         id: '1',
@@ -38,7 +37,7 @@ listaDeProductos = [
         isFavorite: false,
     },    
   ];
-}
+
 
 
 //const idInput = document.getElementById("id");
