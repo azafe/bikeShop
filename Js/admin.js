@@ -11,7 +11,7 @@ export let listaDeProductos = [
     },
     {
         id: '2',
-        nombre: 'Bicicleta Top-Mega RUTA R-2933 Aaaa',
+        nombre: 'Bicicleta Top-Mega RUTA R-29 clasics',
         categoria: 'Ruta',
         precio: '260000',
         imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
@@ -20,7 +20,7 @@ export let listaDeProductos = [
     },
     {
         id: '3',
-        nombre: 'Bicicleta Top-Tega Nena c/rueditas',
+        nombre: 'Bicicleta Top-Mega Nena c/rueditas',
         categoria: 'Niños',
         precio: '36000',
         imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp',
@@ -29,7 +29,7 @@ export let listaDeProductos = [
     },
     {
         id: '4',
-        nombre: 'Bicicleta Top-Tega Free-Style unisex',
+        nombre: 'Bicicleta Top-Mega Free-Style unisex',
         categoria: 'Niños',
         precio: '49000',
         imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp',
