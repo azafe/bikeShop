@@ -529,15 +529,20 @@ font-weight: 600;
 border: none;
 font-size: 15px;
 }
+
 .btn-wsp{
-  position:fixed;
-  bottom:20px;
-  right:25px;
-  color: black;
-  border-radius:30px;
-  text-align:center;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius:50%;
+  background-color: #20ba5a;
+  display: flex;
   justify-content: center;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  align-items: center;
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   z-index:100;
   transition: all 300ms ease;
 }
@@ -546,23 +551,26 @@ font-size: 15px;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
   .btn-wsp{
-      width:63px;
-      height:63px;
+      width:50px;
+      height:50px;
       line-height: 66px;
 }
 }
 
 
 .btn-carrito{
-  position:fixed;
-  
-  bottom:93px;
-  right:25px;
-  color:black;
-  border-radius:30px;
-  text-align:center;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  border-radius:50%;
+  background-color: white;
+  display: flex;
   justify-content: center;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  align-items: center;
+  position:fixed;
+  bottom:100px;
+  right:25px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   z-index:100;
   transition: all 300ms ease;
 }
@@ -571,8 +579,8 @@ font-size: 15px;
 }
 @media only screen and (min-width:320px) and (max-width:768px){
   .btn-carrito{
-      width:63px;
-      height:63px;
+      width:50px;
+      height:50px;
       line-height: 66px;
 }
 }
