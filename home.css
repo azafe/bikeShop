@@ -23,42 +23,14 @@
   padding: 50px;
 }
 
-/* Fin Sections */
 
-/* Comienzo del navbar transparente */
-
-/* Slider automático */
-
-.slidr-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* Proporción 16:9 para el contenedor */
-}
-
-.slidr-container img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
-}
-
-.slidr {
-  background-image: url(img/fondo-1.jpg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.masthead{
   background-size: cover;
-  background-position: center;
+  min-height: 88vh;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
   animation: animate 18s infinite;
-  /* transform: scale(1);  */
-}
-
-.container-no-padding {
-  padding-left: 0;
-  padding-right: 0;
-
 }
 
 @keyframes animate {
@@ -84,6 +56,38 @@
 }
 
 
+
+h1{
+  font-size: 4rem;
+}
+
+.color-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+@media (max-width: 768px) {
+  .masthead {
+      min-height: 30vh;
+  }
+  h1{
+      font-size: calc(1.525rem + 3.3vw);
+  }
+}
+
+
+/* Fin Sections */
+
+/* Comienzo del navbar transparente */
+
+/* Slider automático */
+
+
+
+
+
 .main-heading {
   position: absolute;
   top: 40%;
@@ -101,21 +105,10 @@
 }
 
 
-.header.hero-header {
-  overflow-x: hidden;
-}
 
 
-.hero-header {
-  position: relative;
-  height: 100vh;
-}
 
-.hero-header img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+
 
 .navbar {
   position: absolute;
