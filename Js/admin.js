@@ -1,6 +1,8 @@
 export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 
+
+
 listaDeProductos = [
     {
         id: '1',
