@@ -29,7 +29,7 @@ function login() {
   console.log(password);
 
   if (userName === "admin" && password === "admin") {
-    window.location.href = "./html/admin.html";
+    window.location.href = "../html/admin.html";
     return false;
   } else {
     alert("Usuario inexistente");
