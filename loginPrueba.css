@@ -126,13 +126,9 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: scale(0);
-  transition: transform 0.5s ease, heigth 0.2s ease;
+  transition: heigth 0.2s ease;
 }
 
-.conteiner.active-popup {
-  transform: scale(1);
-}
 
 .conteiner.active {
   height: 650px;
