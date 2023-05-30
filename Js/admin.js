@@ -1,7 +1,7 @@
 
 export let listaDeProductos = [];
 
-if(localStorage.getItem("productos").length==0){
+if(localStorage.getItem("productos") === null || localStorage.getItem("productos").length === 0) {
     listaDeProductos = [
         {    
             id: '1',
@@ -18,7 +18,6 @@ if(localStorage.getItem("productos").length==0){
             precio: '260000',
             imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
             isFavorite: false,
-    
         },
         {
             id: '3',
@@ -27,11 +26,10 @@ if(localStorage.getItem("productos").length==0){
             precio: '36000',
             imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp',
             isFavorite: true,
-    
         },
-      ];
-}else{
-    listaDeProductos = JSON.parse(localStorage.getItem("productos")) ;
+    ];
+} else {
+    listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 }
 
 
