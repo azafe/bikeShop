@@ -1,6 +1,7 @@
 
+export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
-export let listaDeProductos = [
+listaDeProductos = [
     {    
         id: '1',
         nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
@@ -37,7 +38,6 @@ export let listaDeProductos = [
     },    
   ];
   
- listaDeProductos = JSON.parse(localStorage.getItem("productos"));
 
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
