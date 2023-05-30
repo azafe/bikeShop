@@ -8,9 +8,6 @@ const panelAdmin = document.getElementById("panelAdmin");
 const cerrarSesion = document.getElementById("cerrarSesion");
 
 
-console.log("FUNCIONA EL INDEX");
-
-console.log(isAdmin);
 
 if(isAdmin){
     admin.style.display = "block";
@@ -21,9 +18,6 @@ if(isAdmin){
     panelAdmin.style.display = "none";
     cerrarSesion.style.display = "none";
 }
-
-
-//cerrarSesion.addEventListener("click", cerrar);
 
 
 
