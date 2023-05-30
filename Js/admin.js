@@ -33,12 +33,6 @@ if(localStorage.getItem("productos") === null || localStorage.getItem("productos
 }
 
 
-
-
-  
-
-
-//const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
 const categoriaInput = document.getElementById("categoria")
 const precioInput = document.getElementById("precio");
@@ -64,9 +58,6 @@ listaProductos.addEventListener("click", editarProducto);
 if(listaProductos){
 listaProductos.addEventListener("click", eliminarProducto);
 }
-
-console.log(listaDeProductos);
-
 
 
 //Función para validar el formulario
@@ -129,7 +120,6 @@ function agregarProducto(e) {
     agregarProductosForm.reset();
     agregarProductosForm.dataset.mode = "add";
     agregarButton.textContent = "Agregar"
-    console.log(listaDeProductos)
     actualizarTabla();
 }
 }
@@ -176,7 +166,6 @@ function eliminarProducto(e) {
           }).then((result) => {
             if (result.isConfirmed) {
                 const idCapturado = e.target.dataset.id;
-        console.log(idCapturado);
         const index = listaDeProductos.findIndex((producto) => producto.id === idCapturado);
         if (index !== -1){
             listaDeProductos.splice(index, 1);
@@ -200,7 +189,6 @@ function actualizarTabla(){
 
 
     localStorage.setItem("productos", JSON.stringify(listaDeProductos));
-    console.log(listaDeProductos);
 
 
     listaDeProductos.forEach((item) => {
@@ -251,13 +239,6 @@ function actualizarTabla(){
 
     
 }
-
-// const productosLocalStorage = JSON.parse(localStorage.getItem("productos"));
-
-// if(productosLocalStorage){
-//     listaDeProductos = productosLocalStorage;
-//     actualizarTabla();
-// }
 
 
  //Función para generar un id unico

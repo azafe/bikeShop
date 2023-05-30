@@ -2,12 +2,10 @@
 
 import {listaDeProductos} from "./admin.js"
 
-console.log("Se estra ejecutando el js")
 
 const listaDeFavoritos =[];
 
-console.log("Entraste a pagina productos");
-console.log(listaDeProductos);
+
 const form = document.querySelector("form");
 const input = document.querySelector('input[type="text"]');
 const content = document.querySelector("body");
@@ -135,7 +133,6 @@ const mostrarBicicletas = (listaDeProductos) => {
 
 
 function favorite(){
-  console.log("Ingresamos a la función de favoritos");
 }
 
 const filtrarBicicletas = () => {
@@ -233,24 +230,3 @@ botonLimpiar.addEventListener("click", limpiarFiltros)
 
 
 
-
-
-// function favorite(productoId){
-//   console.log("Ingresamos a la función de favoritos");
-//   const listaDeFavoritos = [];
-
-//   const producto = listaDeProductos.find(producto => producto.id === productoId);
-
-//   if(producto){
-//     const index = listaDeFavoritos.indexOf(producto);
-//     if (index !== -1){
-//       listaDeFavoritos.splice(index,1);
-//     }
-//   }else{
-//     listaDeFavoritos.push(producto);
-//   }
-  
-
-//   const corazon = $(`i[data-producto-id="${productoId}"]`);
-//   corazon.toggleClass('far fas');
-// }
