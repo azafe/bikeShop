@@ -1,10 +1,13 @@
 
 .table .editar{
+  margin: 5px;
+  padding: 6px 16px 6px 18px;
   background-color: #0d6efd;
 }
 
 .table .eliminar{
   margin: 5px;
+  
   background-color: red;
   border-color: red;
   
