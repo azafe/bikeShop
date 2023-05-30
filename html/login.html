@@ -72,9 +72,9 @@
         <a href="./login.html"
           ><span class="icon-close"><ion-icon name="close"></ion-icon></span
         ></a>
-        
+
         <div class="form-box login">
-          <form action="#"  >
+          <form action="#">
             <div class="input-box">
               <span class="icon"><ion-icon name="person"></ion-icon></span>
               <input id="username" name="username" type="usuario" required />
@@ -92,7 +92,7 @@
             <button type="submit" class="btn" id="botonDeLogin">Login</button>
           </form>
         </div>
-        
+
         <!--Registro-->
         <div class="form-box register">
           <h2 class="text-center">Registro</h2>
@@ -100,7 +100,15 @@
             <!--Nombre-->
             <div class="input-box" id="grupo__nombre">
               <span class="icon"><ion-icon name="person"></ion-icon></span>
-              <input type="text" id="nombre" name="nombre" required />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                minlength="3"
+                maxlength="10"
+                pattern="[A-Za-z\s]+"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <label>Nombre</label>
@@ -108,7 +116,15 @@
             <!--Apellido-->
             <div class="input-box" id="grupo__apellido">
               <span class="icon"><ion-icon name="person"></ion-icon></span>
-              <input type="text" id="apellido" name="apellido" required />
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                minlength="3"
+                maxlength="10"
+                pattern="[A-Za-z\s]+"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <label>Apellido</label>
@@ -116,7 +132,15 @@
             <!--Usuario-->
             <div class="input-box" id="grupo__usuario">
               <span class="icon"><ion-icon name="person"></ion-icon></span>
-              <input type="usuario" id="usuario" name="usuario" required />
+              <input
+                type="usuario"
+                id="usuario"
+                name="usuario"
+                minlength="3"
+                maxlength="10"
+                pattern="[A-Za-z\s]+"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <label>Usuario</label>
@@ -124,7 +148,15 @@
             <!--Mail-->
             <div class="input-box" id="grupo__email">
               <span class="icon"><ion-icon name="mail"></ion-icon></span>
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                maxlength="40"
+                minlength="10"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <label>Email</label>
@@ -132,7 +164,15 @@
             <!--Contraseña-->
             <div class="input-box" id="grupos__password1">
               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-              <input type="password" id="password1" name="password1" required />
+              <input
+                type="password"
+                id="password1"
+                name="password1"
+                minlength="6"
+                maxlength="12"
+                pattern="[a-zA-Z0-9]{8,12}"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
               <label>Contraseña</label>
@@ -140,10 +180,18 @@
             <!--Conf Contraseña-->
             <div class="input-box" id="grupos__password2">
               <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-              <input type="password" id="password2" name="password2" required />
+              <input
+                type="password"
+                id="password2"
+                name="password2"
+                minlength="6"
+                maxlength="12"
+                pattern="[a-zA-Z0-9]{8,12}"
+                required
+              />
               <i class="fas fa-check-circle"></i>
               <i class="fas fa-exclamation-circle"></i>
-              <label>Contraseña</label>
+              <label>Confirmar contraseña</label>
             </div>
             <div class="registro">
               <label

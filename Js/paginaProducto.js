@@ -99,7 +99,7 @@ const mostrarBicicletas = (listaDeProductos) => {
     corazonClass = bicicleta.isFavorite ? "fas fa-heart corazon-rojo iconCorazon" : "far fa-heart iconCorazon"
 
     const tarjeta = `
-      <div class="cards-hovC col-sm-12 col-md-3 col-lg-3 mb-3 mt-3">
+      <div class="cards-hovC col-sm-12 col-md-5 col-lg-3 mb-3 mt-3">
         <div class="card shadow-lg">
           <img src="${bicicleta.imagen}" alt="biciMB">
           <hr>
