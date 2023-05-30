@@ -29,14 +29,6 @@ if(localStorage.getItem("productos").length==0){
             isFavorite: true,
     
         },
-        {
-            id: '4',
-            nombre: 'Bicicleta Top-Mega Free-Style unisex',
-            categoria: 'Niños',
-            precio: '49000',
-            imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp',
-            isFavorite: false,
-        },    
       ];
 }else{
     listaDeProductos = JSON.parse(localStorage.getItem("productos")) ;
