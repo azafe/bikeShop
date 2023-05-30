@@ -123,7 +123,7 @@ h1{
 
 
 
-.main-heading {
+.titulo {
   position: absolute;
   top: 40%;
   left: 20px; 
@@ -139,6 +139,15 @@ h1{
   word-wrap: break-word; /* Permite que las palabras se dividan en líneas si es necesario */
 }
 
+@media (max-width: 768px) {
+  .titulo{
+    font-size: 20px;
+    top: 70%;
+    text-align: center;
+    left: 150px;
+  }
+  
+}
 
 
 
