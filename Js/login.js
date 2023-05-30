@@ -32,35 +32,71 @@ iconClose.addEventListener("click", () => {
 });
 }
 
-if(botonDeLogin){
-botonDeLogin.addEventListener("click", login);
-}
+// if(botonDeLogin){
+// botonDeLogin.addEventListener("click", login);
+// }
+
+let isAdmin = false;
 
 
-/*Usuario admin*/
+botonDeLogin.addEventListener('click', function() {
+  event.preventDefault();
 
-function login() {
   let userName = document.getElementById("username").value;
   let password = document.getElementById("password").value;
-
-  console.log(userName);
-  console.log(password);
-
-  let isAdmin = false; 
+  let isAdmin = false;
 
   if (userName === "admin" && password === "admin") {
-    isAdmin = true;
-    localStorage.setItem("variable", JSON.stringify(isAdmin));
-    history.pushState({}, "", "../index.html");
-    window.location.reload();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Inicio sesión correctamente',
+      showConfirmButton: false,
+      timer: 1500
+    }).then((result) => {
+      isAdmin = true;
+      localStorage.setItem("variable", JSON.stringify(isAdmin));
+      window.location.href = "../index.html";
+    })
   } else {
+   
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Usuario o contraseña incorrectos',
+      showConfirmButton: true
+    });
     isAdmin = false;
     localStorage.setItem("variable", JSON.stringify(isAdmin));
-    alert("Usuario inexistente");
   }
-}
+});
 
+// /*Usuario admin*/
+// function login() {
+//   let userName = document.getElementById("username").value;
+//   let password = document.getElementById("password").value;
 
+//   if (userName === "admin" && password === "admin") {
+//     isAdmin = true;
+//     Swal.fire({
+//       icon: 'success',
+//       title: 'Inicio de sesión correcto',
+//       text: 'Se ha iniciado sesión correctamente',
+//       showConfirmButton: false,
+//       timer: 2000
+//     }).then((result) => {
+//       window.location.href = "../index.html";
+//     });
+//   } else {
+//     isAdmin = true;
+//     Swal.fire({
+//       icon: 'error',
+//       title: 'Error',
+//       text: 'Usuario o contraseña incorrectos',
+//       showConfirmButton: true
+//     });
+//   }
+// }
 
 
 /*validacion form*/
