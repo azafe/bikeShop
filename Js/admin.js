@@ -1,43 +1,52 @@
 
-export let listaDeProductos = JSON.parse(localStorage.getItem("productos"));
+export let listaDeProductos = [];
 
-listaDeProductos = [
-    {    
-        id: '1',
-        nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
-        categoria: 'Mountain Bike',
-        precio: '140000',
-        imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp',
-        isFavorite: true,
-    },
-    {
-        id: '2',
-        nombre: 'Bicicleta Top-Mega RUTA R-29 clasics',
-        categoria: 'Ruta',
-        precio: '260000',
-        imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
-        isFavorite: false,
+if(localStorage.getItem("productos").length==0){
+    listaDeProductos = [
+        {    
+            id: '1',
+            nombre: 'Bicicleta Top-Mega Yellow M-Bike 29',
+            categoria: 'Mountain Bike',
+            precio: '140000',
+            imagen: 'https://i.postimg.cc/fbzjmbVw/bic-sunshine-negroamarillo.webp',
+            isFavorite: true,
+        },
+        {
+            id: '2',
+            nombre: 'Bicicleta Top-Mega RUTA R-29 clasics',
+            categoria: 'Ruta',
+            precio: '260000',
+            imagen: 'https://i.postimg.cc/Wb2FB9sn/biciBR1.webp',
+            isFavorite: false,
+    
+        },
+        {
+            id: '3',
+            nombre: 'Bicicleta Top-Mega Nena c/rueditas',
+            categoria: 'Niños',
+            precio: '36000',
+            imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp',
+            isFavorite: true,
+    
+        },
+        {
+            id: '4',
+            nombre: 'Bicicleta Top-Mega Free-Style unisex',
+            categoria: 'Niños',
+            precio: '49000',
+            imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp',
+            isFavorite: false,
+        },    
+      ];
+}else{
+    listaDeProductos = JSON.parse(localStorage.getItem("productos")) ;
+}
 
-    },
-    {
-        id: '3',
-        nombre: 'Bicicleta Top-Mega Nena c/rueditas',
-        categoria: 'Niños',
-        precio: '36000',
-        imagen: 'https://i.postimg.cc/QthhFy4Y/biciN-2.webp',
-        isFavorite: true,
 
-    },
-    {
-        id: '4',
-        nombre: 'Bicicleta Top-Mega Free-Style unisex',
-        categoria: 'Niños',
-        precio: '49000',
-        imagen: 'https://i.postimg.cc/W4MsbvnJ/biciN-1.webp',
-        isFavorite: false,
-    },    
-  ];
+
+
   
+
 
 //const idInput = document.getElementById("id");
 const nombreInput = document.getElementById("nombre");
